@@ -1,0 +1,22 @@
+.chooseGender{
+    margin-top: 90px;
+    color: wheat;
+}
+.chooseGender a img{
+    height: 300px;
+    border-radius: 30px;
+    margin-top: -50px;
+
+}
+.chooseGender a img:hover{
+    filter:contrast(1.3);
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.login{
+    color: wheat;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+}
