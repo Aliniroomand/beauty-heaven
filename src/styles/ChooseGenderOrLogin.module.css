@@ -24,8 +24,10 @@
 .line{
     width:500px;
     height: 3px;
-    background-color: aliceblue;
+    background-color: rgb(99, 99, 99);
     text-align: center;
+    border-radius: 150%;
+    margin: 10px auto;
 }
 .login{
     color: wheat;

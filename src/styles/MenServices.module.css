@@ -1,0 +1,54 @@
+.container{
+    float: right;
+}
+.imageContainer{
+    background: url(../assets/men-services-BG.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:100svh ;
+    width:80svh ;
+    position: relative;
+    border-radius: 500px;
+    display: inline-block;
+
+}
+.listContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 2rem;
+    transform: translateX(-100%);
+    margin-top: 100px;
+}
+.listContainer {
+color:rgb(252, 184, 58)
+}
+.listContainer li{
+    margin: 5px auto;
+}
+input[type="checkbox"]{
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    border: 2px solid white;
+}
+input[type="checkbox"]:checked{
+background-color: rgb(247, 181, 60);
+}
+.listContainer li label{
+    color: wheat;
+    text-decoration: none;
+}
+.listContainer li label:hover{
+    cursor: pointer;
+}
+.listContainer li:hover{
+    transform: scale(1.2);
+    transition: .2s;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
