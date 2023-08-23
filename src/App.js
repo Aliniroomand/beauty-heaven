@@ -1,11 +1,10 @@
-import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 //Components
 import ChooseGenderOrLogin from './components/ChooseGenderOrLogin';
 
 function App() {
   return (
-    <div className="App">
+    <div style={{textAlign:"center"}}>
       <BrowserRouter>
       <ChooseGenderOrLogin/>
       </BrowserRouter>
