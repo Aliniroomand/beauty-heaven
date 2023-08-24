@@ -1,21 +1,82 @@
 import React, { useState } from 'react';
 import styles from '../styles/MenServices.module.css';
 
+
 const MenServices = () => {
   const [checkedItems, setCheckedItems] = useState({});
 
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
-    setCheckedItems((prevState) => ({
-      ...prevState,
+    setCheckedItems((event) => ({
+      ...event,
       [name]: checked,
-    })) 
-    console.log(checkedItems);;
+    }
+    ) )
   };
+  
+  const searchForBarberHandler = (event)=>{
+    event.preventDefault();
+    const choosenServices = Object.keys(checkedItems).filter(((key) => checkedItems[key] === true))
+    return choosenServices;
+  }
+  
+  //for showing what services are choosen
+const choosedServices = Object.keys(checkedItems).filter((key) => checkedItems[key] === true);
+let classForBackground = styles.imageContainer;
 
+if(!choosedServices.join("")){
+  classForBackground = styles.imageContainer
+}
+if(choosedServices.join("") === "haircut" ){
+  classForBackground = styles.hairImage;
+}
+if(choosedServices.join("") === "beard_service" ){
+  classForBackground = styles.beard_service;
+}  
+if(choosedServices.join("") === "scalp_treatments" ){
+  classForBackground = styles.scalp_treatments;
+}
+if(choosedServices.join("") === "hair_coloring" ){
+  classForBackground = styles.hair_coloring;
+}
+if(choosedServices.join("") === "haircutbeard_service" ||choosedServices.join("") === "beard_servicehaircut" ){
+  classForBackground = styles.haircutbeard_service;
+}
+if(choosedServices.join("") === "haircutscalp_treatments" || choosedServices.join("") === "scalp_treatmentshaircut" ){
+  classForBackground = styles.haircutscalp_treatments;
+}
+if(choosedServices.join("") === "haircuthair_coloring" || choosedServices.join("") === "hair_coloringhaircut" ){
+  classForBackground = styles.haircuthair_coloring;
+}
+if(choosedServices.join("") === "beard_servicescalp_treatments" || choosedServices.join("") === "scalp_treatmentsbeard_service" ){
+  classForBackground = styles.beard_servicescalp_treatments;
+}
+if(choosedServices.join("") === "beard_servicehair_coloring" || choosedServices.join("") === "hair_coloringbeard_service" ){
+  classForBackground = styles.beard_servicehair_coloring;
+}
+if(choosedServices.join("") === "hair_coloringscalp_treatments" || choosedServices.join("") === "scalp_treatmentshair_coloring" ){
+  classForBackground = styles.hair_coloringscalp_treatments;
+}
+if(choosedServices.join("").includes("haircut") &&
+    choosedServices.join("").includes("beard_service")  &&
+    choosedServices.join("").includes("scalp_treatments")
+    )
+    {classForBackground = styles.haircutbeard_servicescalp_treatments;
+}
+
+if(choosedServices.join("").includes("groom_services")){
+  classForBackground = styles.groom_services;
+}
+
+
+//____________________
+
+  //for changing man's face based on choosen services
+  
+console.log(choosedServices.join(""));
   return (
     <div className={styles.container}>
-      <form className={styles.imageContainer}>
+      <form className={classForBackground} >
         <ul className={styles.listContainer}>
             <h3>choose what do you need</h3>
           <li>
@@ -78,7 +139,7 @@ const MenServices = () => {
               Groom Services
             </label>
           </li>
-            <button type='submit'> search for barbers</button>
+            <button type='submit' onClick={searchForBarberHandler} className={styles.searchButton}> search for barbers</button>
         </ul>
 
       </form>
