@@ -1,0 +1,1 @@
+https://api.slingacademy.com/v1/sample-data/users

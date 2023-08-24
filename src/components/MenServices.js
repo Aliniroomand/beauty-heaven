@@ -61,14 +61,25 @@ if(choosedServices.join("").includes("haircut") &&
     choosedServices.join("").includes("beard_service")  &&
     choosedServices.join("").includes("scalp_treatments")
     )
+    {classForBackground = styles.hair_coloringscalp_treatmentsbeard_service;
+}
+if(choosedServices.join("").includes("hair_coloring") &&
+    choosedServices.join("").includes("beard_service")  &&
+    choosedServices.join("").includes("scalp_treatments")
+    )
+    {classForBackground = styles.hair_coloringscalp_treatmentsbeard_service;
+}
+if(choosedServices.join("").includes("haircut") &&
+    choosedServices.join("").includes("hair_coloring") &&
+    choosedServices.join("").includes("beard_service")  &&
+    choosedServices.join("").includes("scalp_treatments")
+    )
     {classForBackground = styles.haircutbeard_servicescalp_treatments;
 }
 
 if(choosedServices.join("").includes("groom_services")){
   classForBackground = styles.groom_services;
 }
-
-
 //____________________
 
   //for changing man's face based on choosen services
