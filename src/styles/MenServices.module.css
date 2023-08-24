@@ -133,3 +133,11 @@ background: url(../assets/Men-images-services/beard.png);
     display: inline-block;
 }
 
+.barbersList{
+    height: 80svh;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 10px;
+    float: left;
+    overflow-y:scroll ;
+}

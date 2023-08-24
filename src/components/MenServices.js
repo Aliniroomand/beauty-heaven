@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from '../styles/MenServices.module.css';
 
+//components
+import BarbersList from './BarbersList';
 
 const MenServices = () => {
   const [checkedItems, setCheckedItems] = useState({});
@@ -61,31 +63,21 @@ if(choosedServices.join("").includes("haircut") &&
     choosedServices.join("").includes("beard_service")  &&
     choosedServices.join("").includes("scalp_treatments")
     )
-    {classForBackground = styles.hair_coloringscalp_treatmentsbeard_service;
-}
-if(choosedServices.join("").includes("hair_coloring") &&
-    choosedServices.join("").includes("beard_service")  &&
-    choosedServices.join("").includes("scalp_treatments")
-    )
-    {classForBackground = styles.hair_coloringscalp_treatmentsbeard_service;
-}
-if(choosedServices.join("").includes("haircut") &&
-    choosedServices.join("").includes("hair_coloring") &&
-    choosedServices.join("").includes("beard_service")  &&
-    choosedServices.join("").includes("scalp_treatments")
-    )
     {classForBackground = styles.haircutbeard_servicescalp_treatments;
 }
 
 if(choosedServices.join("").includes("groom_services")){
   classForBackground = styles.groom_services;
 }
+
+
 //____________________
 
   //for changing man's face based on choosen services
   
 console.log(choosedServices.join(""));
   return (
+    <>
     <div className={styles.container}>
       <form className={classForBackground} >
         <ul className={styles.listContainer}>
@@ -155,6 +147,10 @@ console.log(choosedServices.join(""));
 
       </form>
     </div>
+        <div className={styles.barbersList}>
+        <BarbersList/>
+      </div>
+      </>
   );
 };
 

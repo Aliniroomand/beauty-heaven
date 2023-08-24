@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    padding-inline: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    background-color: rgba(128, 128, 128, 0.349);
+    backdrop-filter: blur(2px);
+}
+.imageContainer img{
+    width:100px;
+    border-radius: 50%;
+}
+.textContainer h3{
+    color:rgb(212, 127, 0);;
+    padding: 0;
+    margin: 0;
+}
+.textContainer h3 span{
+    color:rgb(252, 184, 58);
+}
