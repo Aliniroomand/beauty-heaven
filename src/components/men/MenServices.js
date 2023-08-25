@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../styles/MenServices.module.css';
+import styles from '../../styles/MenServices.module.css';
 
 //components
 import BarbersList from './BarbersList';
@@ -24,8 +24,9 @@ const MenServices = () => {
   
   //for showing what services are choosen
 const choosedServices = Object.keys(checkedItems).filter((key) => checkedItems[key] === true);
-let classForBackground = styles.imageContainer;
 
+//this part is for changing image_______
+let classForBackground = styles.imageContainer;
 if(!choosedServices.join("")){
   classForBackground = styles.imageContainer
 }
@@ -70,12 +71,10 @@ if(choosedServices.join("").includes("groom_services")){
   classForBackground = styles.groom_services;
 }
 
-
 //____________________
 
   //for changing man's face based on choosen services
   
-console.log(choosedServices.join(""));
   return (
     <>
     <div className={styles.container}>

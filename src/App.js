@@ -3,7 +3,7 @@ import { Route,Routes ,Navigate } from 'react-router-dom';
 import BarbersContextProvider from './context/BarbersContextProvider';
 //Components
 import ChooseGenderOrLogin from './components/ChooseGenderOrLogin';
-import MenServices from './components/MenServices';
+import MenServices from './components/men/MenServices';
 import WomenServices from './components/WomenServices';
 
 function App() {
