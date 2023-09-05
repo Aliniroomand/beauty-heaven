@@ -60,77 +60,17 @@ background-color: rgb(247, 181, 60);
 .imageContainer{
     background:url(../assets/Men-images-services/men-services-BG.png);
 }
-.hairImage{
-    background:url(../assets/Men-images-services/hair.png);
-}
-.beard_service{
-background: url(../assets/Men-images-services/beard.png);
-}
-.scalp_treatments{
-    background: url(../assets/Men-images-services/scalp.png);
-}
-.hair_coloring{
-    background: url(../assets/Men-images-services/hairColoring.png);
-}
-
 .groom_services{
-    background: url(../assets/Men-images-services/groom.png);
+    background:url(../assets/Men-images-services/groom.png);
 }
-.haircutbeard_service{
-    background: url(../assets/Men-images-services/haircutbeard_service.png);
-}
-.haircutscalp_treatments{
-    background: url(../assets/Men-images-services/haircutscalp_treatments.png);
-}
-.haircuthair_coloring{
-    background: url(../assets/Men-images-services/hair_coloringhaircut.png);
-}
-.beard_servicescalp_treatments{
-    background:url(../assets/Men-images-services/scalp_treatmentsbeard_service.png);
-}
-.beard_servicehair_coloring{
-    background: url(../assets/Men-images-services/hair_coloringhaircut.png);
-}
-.hair_coloringscalp_treatments{
-    background: url(../assets/Men-images-services/hair_coloringscalp_treatments.png);
-}
-.haircutbeard_servicescalp_treatments{
-    background: url(../assets/Men-images-services/scalp_treatmentsbeard_servicehaircut.png);
-}
-.hair_coloringscalp_treatmentsbeard_service{
-    background: url(../assets/Men-images-services/hair_coloringscalp_treatments.png);
-
-}
-.imageContainer,
-.hairImage,
-.beard_service,
-.scalp_treatments,
-.hair_coloring,
-.haircutbeard_service,
-.haircutscalp_treatments,
-.haircuthair_coloring,
-.beard_servicescalp_treatments,
-.beard_servicehair_coloring,
-.hair_coloringscalp_treatments,
-.haircutbeard_servicescalp_treatments,
-.hair_coloringscalp_treatmentsbeard_service
- {
+.imageContainer ,
+.groom_services{
     background-size: contain;
     background-repeat: no-repeat;
-    height:100svh ;
-    width:80svh ;
+    height:90svh ;
+    width:60svh ;
     position: relative;
-    border-radius: 500px;
-    display: inline-block;
-}
-.groom_services{
-    background-size: cover;
-    background-repeat: no-repeat;
-    height:100svh ;
-    width:80svh ;
-    position: relative;
-    border-radius: 500px;
-    display: inline-block;
+    border-radius: 50px;
 }
 
 .barbersList{

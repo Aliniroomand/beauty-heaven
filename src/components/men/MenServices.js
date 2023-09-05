@@ -19,56 +19,18 @@ const MenServices = () => {
   const searchForBarberHandler = (event)=>{
     event.preventDefault();
     const choosenServices = Object.keys(checkedItems).filter(((key) => checkedItems[key] === true))
-    return choosenServices;
   }
+
   
   //for showing what services are choosen
 const choosedServices = Object.keys(checkedItems).filter((key) => checkedItems[key] === true);
 
 //this part is for changing image_______
 let classForBackground = styles.imageContainer;
-if(!choosedServices.join("")){
-  classForBackground = styles.imageContainer
-}
-if(choosedServices.join("") === "haircut" ){
-  classForBackground = styles.hairImage;
-}
-if(choosedServices.join("") === "beard_service" ){
-  classForBackground = styles.beard_service;
-}  
-if(choosedServices.join("") === "scalp_treatments" ){
-  classForBackground = styles.scalp_treatments;
-}
-if(choosedServices.join("") === "hair_coloring" ){
-  classForBackground = styles.hair_coloring;
-}
-if(choosedServices.join("") === "haircutbeard_service" ||choosedServices.join("") === "beard_servicehaircut" ){
-  classForBackground = styles.haircutbeard_service;
-}
-if(choosedServices.join("") === "haircutscalp_treatments" || choosedServices.join("") === "scalp_treatmentshaircut" ){
-  classForBackground = styles.haircutscalp_treatments;
-}
-if(choosedServices.join("") === "haircuthair_coloring" || choosedServices.join("") === "hair_coloringhaircut" ){
-  classForBackground = styles.haircuthair_coloring;
-}
-if(choosedServices.join("") === "beard_servicescalp_treatments" || choosedServices.join("") === "scalp_treatmentsbeard_service" ){
-  classForBackground = styles.beard_servicescalp_treatments;
-}
-if(choosedServices.join("") === "beard_servicehair_coloring" || choosedServices.join("") === "hair_coloringbeard_service" ){
-  classForBackground = styles.beard_servicehair_coloring;
-}
-if(choosedServices.join("") === "hair_coloringscalp_treatments" || choosedServices.join("") === "scalp_treatmentshair_coloring" ){
-  classForBackground = styles.hair_coloringscalp_treatments;
-}
-if(choosedServices.join("").includes("haircut") &&
-    choosedServices.join("").includes("beard_service")  &&
-    choosedServices.join("").includes("scalp_treatments")
-    )
-    {classForBackground = styles.haircutbeard_servicescalp_treatments;
-}
 
-if(choosedServices.join("").includes("groom_services")){
-  classForBackground = styles.groom_services;
+{choosedServices.join("").includes("groom_services") ? 
+  classForBackground = styles.groom_services :
+  classForBackground=styles.imageContainer;
 }
 
 //____________________

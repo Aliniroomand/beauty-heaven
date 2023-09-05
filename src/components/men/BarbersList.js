@@ -19,7 +19,7 @@ console.log(Barbers.length);
                     barberData={barber}
                     />)
             :<div>
-                <img src={menLoading} style={{width:"200px",position:"fixed",zIndex:"1"}}/>
+                <img src={menLoading}  alt ="loading"style={{width:"200px",position:"fixed",zIndex:"1"}}/>
                 <figcaption style={{color:"red",fontSize:"2rem",position:"fixed",zIndex:"10",a:"center"}}>loading</figcaption>
             </div>        
         }
