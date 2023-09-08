@@ -1,12 +1,11 @@
 .container{
-    justify-content: center;
+    justify-content:flex-start;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    height: 100vh;
 }
 .chooseGender{
-    margin-top: 90px;
     color: wheat;
 
 }
@@ -35,4 +34,7 @@
     flex-direction:column ;
     align-items: center;
     justify-content: center;
+    height: 10px;
+    padding-top: 30px;
 }
+

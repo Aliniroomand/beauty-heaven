@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(240, 248, 255, 0.555);
+    padding-inline: 10px;
+    border-radius: 30px;
+    height: 50px;
+    
+}
+.container img{
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgba(97, 97, 97, 0.555);
+
+}
+.container ul {
+    display: flex;
+align-items: center;
+}
+.container ul li{
+    list-style: none;
+    padding-inline: 12px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.container ul li:hover{
+transform: scale(1.15);
+transition: .3s;
+cursor: pointer;
+}

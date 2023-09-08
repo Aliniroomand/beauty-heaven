@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(240, 248, 255, 0.637);
+    justify-content:space-evenly;
+    align-items: center;
+    min-width: 95vw;
+    padding-inline: 5px;
+    color: #1d1d1d;
+}
+.logo img{
+    width:200px
+}
+.contactInformations{
+    font-size: .9rem;
+}
+.socialMediaIcons {
+    text-align: justify;
+}

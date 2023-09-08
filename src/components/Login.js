@@ -6,7 +6,7 @@ import React from 'react';
 import google from "../assets/google.svg";
 
 // Styles
-import styles from "../styles/login.module.css";
+import styles from "./login.module.css";
 
 const Login = () => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 //styles
-import styles from '../styles/ChooseGenderOrLogin.module.css'
+import styles from './ChooseGenderOrLogin.module.css'
 
 //Images 
 import manGender from '../assets/men first page logo.png'
