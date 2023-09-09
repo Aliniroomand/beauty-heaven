@@ -6,6 +6,8 @@ import styles from './Barber.module.css'
 
 const Barber = ({barberData}) => {
     let barberServices={...barberData,services:'haircut'}
+    //The purpose of this number modulo operation is solely to simulate the provided services,
+    // and it does not serve any practical purpose when using the actual and original API.
     if (barberData.id % 2 === 0) {
         barberServices = { ...barberData, services: 'haircut,beard_service' };
         if (barberData.id % 6 === 0) {
