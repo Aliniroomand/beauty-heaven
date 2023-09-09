@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../../styles/MenServices.module.css';
+import styles from './MenServices.module.css';
 
 //components
 import BarbersList from './BarbersList';
@@ -16,23 +16,20 @@ const MenServices = () => {
     ) )
   };
   
-  const searchForBarberHandler = (event)=>{
-    event.preventDefault();
-    const choosenServices = Object.keys(checkedItems).filter(((key) => checkedItems[key] === true))
-  }
-
+  
   
   //for showing what services are choosen
-const choosedServices = Object.keys(checkedItems).filter((key) => checkedItems[key] === true);
-
+  const choosedServices = Object.keys(checkedItems).filter((key) => checkedItems[key] === true);
+  console.log(choosedServices);
 //this part is for changing image_______
 let classForBackground = styles.imageContainer;
 
 {choosedServices.join("").includes("groom_services") ? 
-  classForBackground = styles.groom_services :
-  classForBackground=styles.imageContainer;
+classForBackground = styles.groom_services :
+classForBackground=styles.imageContainer;
 }
 
+  
 //____________________
 
   //for changing man's face based on choosen services
@@ -40,7 +37,11 @@ let classForBackground = styles.imageContainer;
   return (
     <>
     <div className={styles.container}>
-      <form className={classForBackground} >
+      <div className={classForBackground}>
+
+      </div>
+      <div>
+      <form  >
         <ul className={styles.listContainer}>
             <h3>choose what do you need</h3>
           <li>
@@ -103,14 +104,14 @@ let classForBackground = styles.imageContainer;
               Groom Services
             </label>
           </li>
-            <button type='submit' onClick={searchForBarberHandler} className={styles.searchButton}> search for barbers</button>
         </ul>
 
       </form>
-    </div>
+      </div>
         <div className={styles.barbersList}>
         <BarbersList/>
       </div>
+    </div>
       </>
   );
 };

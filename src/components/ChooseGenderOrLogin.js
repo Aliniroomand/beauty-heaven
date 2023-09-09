@@ -26,7 +26,7 @@ const ChooseGenderOrLogin = () => {
                 <div className={styles.line}></div>
             </div>
             <div className={styles.login}>
-                <h1>Or if you have account , Login:</h1>
+                <h2>Or if you have account , Login:</h2>
                 <Login/>
             </div>
             

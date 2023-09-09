@@ -9,6 +9,7 @@
     padding-top: 20px;
     margin-bottom: 5px;
     background-color: rgba(128, 128, 128, 0.349);
+ 
     backdrop-filter: blur(2px);
 }
 .imageContainer img{

@@ -3,10 +3,12 @@ import { Route,Routes ,Navigate } from 'react-router-dom';
 import ChooseGenderOrLogin from './ChooseGenderOrLogin';
 import MenServices from './men/MenServices';
 import WomenServices from './WomenServices';
+//styles
+import styles from "./Landing.module.css"
 
 const Landing = () => {
     return (
-        <div>
+        <div className={styles.container}>
       <Routes>
         <Route path="/womenservices" element={<WomenServices />} />
         <Route path="/menservices" element={<MenServices />} />

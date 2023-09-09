@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //logo image
 import Logo from "../assets/mainLogo.png"
@@ -6,9 +7,13 @@ import Logo from "../assets/mainLogo.png"
 import styles from "./Navbar.module.css"
 
 const Navbar = () => {
+
     return (
         <div className={styles.container}>
+            <Link to="/">
             <img src={Logo} alt='logo'/>
+            </Link>
+                
             <ul>
                 <li>services</li>
                 <li>barbers</li>

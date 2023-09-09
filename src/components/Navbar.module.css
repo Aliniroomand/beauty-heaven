@@ -5,14 +5,20 @@
     background-color: rgba(240, 248, 255, 0.555);
     padding-inline: 10px;
     border-radius: 30px;
-    height: 50px;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     
 }
 .container img{
     width: 50px;
     border-radius: 50%;
     background-color: rgba(97, 97, 97, 0.555);
-
+}
+.container a{
+    margin-top: 7px;
 }
 .container ul {
     display: flex;

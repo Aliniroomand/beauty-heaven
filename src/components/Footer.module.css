@@ -7,13 +7,20 @@
     min-width: 95vw;
     padding-inline: 5px;
     color: #1d1d1d;
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 15vh;
 }
 .logo img{
-    width:200px
+    width:100px
 }
 .contactInformations{
-    font-size: .9rem;
+    font-size: .8rem;
 }
 .socialMediaIcons {
     text-align: justify;
+    font-size: .8rem;
+
 }

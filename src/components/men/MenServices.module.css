@@ -1,24 +1,17 @@
 .container{
-    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
 }
 
 .listContainer{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     list-style: none;
-    font-size: 2rem;
-    transform: translateX(-100%);
-    margin-top: 100px;
+    font-size: 1.9rem;
+    color:rgb(252, 184, 58)
 }
-.listContainer {
-color:rgb(252, 184, 58)
-}
-.listContainer li{
-    margin: 5px auto;
-}
+
+
 input[type="checkbox"]{
     border-radius: 50%;
     width: 18px;
@@ -58,26 +51,25 @@ background-color: rgb(247, 181, 60);
 }
 /* for changing images */
 .imageContainer{
-    background:url(../assets/Men-images-services/men-services-BG.png);
+    background:url(../../assets/Men-images-services/men-services-BG.png);
 }
 .groom_services{
-    background:url(../assets/Men-images-services/groom.png);
+    background:url(../../assets/Men-images-services/groom.png);
 }
 .imageContainer ,
 .groom_services{
     background-size: contain;
     background-repeat: no-repeat;
-    height:90svh ;
-    width:60svh ;
-    position: relative;
+    height: 430px;
+    width: 380px;
+    margin-left: 20px;
     border-radius: 50px;
 }
 
 .barbersList{
-    height: 80svh;
+    height: 70vh;
     border-radius: 50px;
-    position: fixed;
-    bottom: 10px;
-    float: left;
-    overflow-y:scroll ;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    overflow-y: scroll;
 }

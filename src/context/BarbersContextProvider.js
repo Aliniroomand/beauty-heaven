@@ -10,16 +10,17 @@ export const BarbersContext= createContext();
 const BarbersContextProvider = (props) => {
     const [data,setData]=useState([]);
     useEffect ( ()=>{
-            const fetchInfo= async ()=>{
-                setData(await barbersInformations()) 
-            }
-            fetchInfo();
-        },[])
+        const fetchInfo= async ()=>{
+            setData(await barbersInformations()) 
+        }
+        fetchInfo();
+    },[])
     return (
         <BarbersContext.Provider value={data}>
             {props.children}
         </BarbersContext.Provider>
-    );
-};
-
+        
+        );
+    };
+    
 export default BarbersContextProvider;

@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center", height: "100vh", overflow: "hidden"  }}>
       <BarbersContextProvider>
         <Navbar/>
       <Landing/>
