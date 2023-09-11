@@ -16,11 +16,10 @@ const MenServices = () => {
     ) )
   };
   
-  
-  
   //for showing what services are choosen
   const choosedServices = Object.keys(checkedItems).filter((key) => checkedItems[key] === true);
-  console.log(choosedServices);
+  
+  
 //this part is for changing image_______
 let classForBackground = styles.imageContainer;
 
@@ -109,7 +108,9 @@ classForBackground=styles.imageContainer;
       </form>
       </div>
         <div className={styles.barbersList}>
-        <BarbersList/>
+        {<BarbersList
+          services={choosedServices}
+         />}
       </div>
     </div>
       </>

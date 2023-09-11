@@ -1,35 +1,52 @@
-import React,{useContext} from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
-//Context
-import {BarbersContext} from '../../context/BarbersContextProvider';
-//Components
+// Context
+import { BarbersContext } from '../../context/BarbersContextProvider';
+// Components
 import Barber from '../men/Barber';
-//LOading 
-import menLoading from '../../assets/loading/men-loading.gif'
-// styles
-import styles from './BarberList.module.css'
+// Loading
+import menLoading from '../../assets/loading/men-loading.gif';
+// Styles
+import styles from './BarberList.module.css';
 
-const BarbersList = () => {
-const Barbers=useContext(BarbersContext);
-    return (
-        <div className={styles.container}>
-          <h2 style={{color:"rgb(250, 100, 0)",fontSize:"1.2rem"}}>{`List of Barbers:` }<br></br>
-          {`total:${Barbers.length} persons`}</h2>
+const BarbersList = ({ services }) => {
+  const Barbers = useContext(BarbersContext);
+  const [filteredBarbers, setFilteredBarbers] = useState([]);
+// console.log(Barbers);
+//   useEffect(() => {
+//     if (services && services.length > 0) {
+//       const filteredBarbers = Barbers.filter(barber => {
+//         return barber.services && barber.services.includes(services);
+//       });
+//       setFilteredBarbers(filteredBarbers);
+//     } else {
+//       setFilteredBarbers(filteredBarbers);
+//     }
+//   }, [services]);
 
-        {
-            Barbers.length === 100? 
-                Barbers.map(barber=> 
-                <Barber 
-                    key={barber.id}
-                    barberData={barber}
-                    />)
-            :<div className={styles.loadingPart}>
-                <img src={menLoading}  alt ="loading"style={{}}/>
-                <figcaption>LOADING</figcaption>
-            </div>        
+  return (
+    <div className={styles.container}>
+      <h2 style={{ color: "rgb(250, 100, 0)", fontSize: "1.2rem" }}>
+        {`List of Barbers:`}<br />
+        {`total: ${filteredBarbers.length} persons`}
+      </h2>
+
+      <div>
+        {filteredBarbers.length === 100 ?
+          filteredBarbers.map(barber =>
+            <Barber
+              key={barber.id}
+              barberData={barber}
+            />)
+          :
+          <div className={styles.loadingPart}>
+            <img src={menLoading} alt="loading" style={{}} />
+            <figcaption>LOADING</figcaption>
+          </div>
         }
-        </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default BarbersList;

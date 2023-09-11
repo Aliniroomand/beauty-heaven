@@ -9,26 +9,18 @@ const Barber = ({barberData}) => {
     //The purpose of this number modulo operation is solely to simulate the provided services,
     // and it does not serve any practical purpose when using the actual and original API.
     if (barberData.id % 2 === 0) {
-        barberServices = { ...barberData, services: 'haircut,beard_service' };
-        if (barberData.id % 6 === 0) {
+        barberServices = { ...barberData, services: 'haircut,beard_service' };}
+    if (barberData.id % 3 === 0) {
           barberServices = { ...barberData, services: 'haircut,beard_service, scalp_treatments' };
         }
-      } else if (barberData.id % 6 === 0) {
-        barberServices = { ...barberData, services: 'haircut,scalp_treatments' };
-        if (barberData.id % 2 === 0) {
-          barberServices = { ...barberData, services: 'haircut,beard_service, scalp_treatments' };
+    if (barberData.id % 6 === 0 ) {
+        barberServices = { ...barberData, services: 'haircut,beard_service, scalp_treatments,hair_coloring' };
         }
-      } else if (barberData.id % 10 === 0) {
-        barberServices = { ...barberData, services: 'haircut,hair_coloring' };
-      } else if (barberData.id % 4 === 0) {
-        barberServices = { ...barberData, services: 'haircut,groom_services' };
+    if (barberData.id % 10 === 0) {
+        barberServices = { ...barberData, services: 'haircut,beard_service, scalp_treatments,hair_coloring,groom_services' };
       }
     
 
-    // console.log(services.services)
-    // console.log(barberData.id%5===0)
-    // const service=barberData.city.split(" ")[0]==="West"
-    // const [services,setServices]=useState([])
     return (
         <div className={styles.container}>
             <div className={styles.imageContainer}>
