@@ -1,25 +1,28 @@
 .container{
     display: flex;
-    flex-direction: column;
-    width: 200px;
+    flex-direction: row;
+    align-items: center;
+    width: 20vw;
     border: 1px solid gray;
-    border-radius: 50px;
-    padding-inline: 30px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    margin-bottom: 5px;
     background-color: rgba(128, 128, 128, 0.349);
- 
+    margin-bottom: 5px;
+    padding: 5px 10px;
     backdrop-filter: blur(2px);
+    border-radius: 30px;
 }
 .imageContainer img{
-    width:100px;
+    width:50px;
     border-radius: 50%;
+}
+.textContainer{
+    display: flex;
+    flex-direction: column;
 }
 .textContainer h3{
     color:rgb(212, 127, 0);;
     padding: 0;
     margin: 0;
+    font-size: 1rem;
 }
 .textContainer h3 span{
     color:rgb(252, 184, 58);

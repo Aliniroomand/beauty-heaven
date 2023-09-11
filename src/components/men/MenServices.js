@@ -23,15 +23,15 @@ const MenServices = () => {
 //this part is for changing image_______
 let classForBackground = styles.imageContainer;
 
-{choosedServices.join("").includes("groom_services") ? 
-classForBackground = styles.groom_services :
-classForBackground=styles.imageContainer;
+if(choosedServices.join("").includes("groom_services")) { 
+classForBackground = styles.groom_services }
+else{
+classForBackground=styles.imageContainer
 }
 
   
 //____________________
 
-  //for changing man's face based on choosen services
   
   return (
     <>

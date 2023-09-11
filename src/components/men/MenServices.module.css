@@ -72,8 +72,7 @@ input[type="checkbox"]:disabled{
 }
 
 .barbersList{
-    height: 70vh;
-    border-radius: 50px;
+    height: 68vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
     overflow-y: scroll;
