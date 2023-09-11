@@ -11,8 +11,7 @@ import styles from './BarberList.module.css';
 
 const BarbersList = ({ services }) => {
   const Barbers = useContext(BarbersContext);
-console.log(Barbers.map(barber => barber.services.sort()));
-console.log(services.sort());
+
 let filtered=[];
 if(services.length < 1 ){
 filtered=Barbers

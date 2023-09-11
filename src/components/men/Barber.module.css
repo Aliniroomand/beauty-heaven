@@ -17,6 +17,9 @@
 .textContainer{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
 }
 .textContainer h3{
     color:rgb(212, 127, 0);;
@@ -27,3 +30,8 @@
 .textContainer h3 span{
     color:rgb(252, 184, 58);
 }
+
+
+
+
+

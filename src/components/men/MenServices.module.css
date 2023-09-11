@@ -75,11 +75,16 @@ input[type="checkbox"]:disabled{
     height: 68vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    padding-right: 5vh;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .noteOfGroomService{
     font-size:.8rem;
     margin-top:-5px;
     color:rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
+    width: 40vw;
+    border-radius: 50%;
+
 }

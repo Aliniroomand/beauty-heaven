@@ -5,11 +5,12 @@ import BarbersContextProvider from './context/BarbersContextProvider';
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
 import Footer from './components/Footer';
-
+//styles
+import styles from"./App.module.css"
 
 function App() {
   return (
-    <div style={{ textAlign: "center", height: "100vh", overflow: "hidden"  }}>
+    <div className={styles.container} style={{ textAlign: "center", height: "100vh", overflow: "hidden"  }}>
       <BarbersContextProvider>
         <Navbar/>
       <Landing/>

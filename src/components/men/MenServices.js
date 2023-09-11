@@ -4,6 +4,7 @@ import styles from './MenServices.module.css';
 //components
 import BarbersList from './BarbersList';
 
+
 const MenServices = () => {
   const [checkedItems, setCheckedItems] = useState({});
 
@@ -42,7 +43,7 @@ classForBackground=styles.imageContainer
       <div>
       <form  >
         <ul className={styles.listContainer}>
-            <h3>choose what do you need</h3>
+            <h3>choose what service or services do you need</h3>
           <li>
             <label htmlFor="haircut">
               <input

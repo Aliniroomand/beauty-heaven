@@ -33,7 +33,6 @@ const BarbersContextProvider = (props) => {
         
         return { ...item, services };
       });
-
     return (
         <BarbersContext.Provider value={newData}>
             {props.children}
