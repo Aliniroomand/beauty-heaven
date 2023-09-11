@@ -17,21 +17,19 @@ const BarbersContextProvider = (props) => {
     },[]);
 
     const newData = data.map(item => {
-        let services = 'haircut';
+        let services = ['haircut'];
         //The purpose of this number modulo operation is solely to simulate the provided services,
         // and it does not serve any practical purpose when using the actual and original API.
-          if (item.id % 2 === 0) {
-            services += ',beard_service';
+          if (item.id % 2 === 0 ) {
+            services.push('beard_service','scalp_treatments');
           }
           if (item.id % 3 === 0) {
-            services += ',scalp_treatments';
+            services.push('beard_service','scalp_treatments','hair_coloring');
           }
-          if (item.id % 6 === 0) {
-            services += ',hair_coloring';
+          if (item.id % 4 === 0) {
+            services.push('beard_service','scalp_treatments','hair_coloring','groom_services');
           }
-          if (item.id % 10 === 0) {
-            services += ',groom_services';
-          }
+
         
         return { ...item, services };
       });

@@ -12,8 +12,8 @@ const MenServices = () => {
     setCheckedItems((event) => ({
       ...event,
       [name]: checked,
-    }
-    ) )
+    }));
+    
   };
   
   //for showing what services are choosen
@@ -51,6 +51,7 @@ classForBackground=styles.imageContainer;
                 name="haircut"
                 checked={checkedItems.haircut || false}
                 onChange={handleCheckboxChange}
+                disabled={checkedItems.groom_services}
               />
               Haircut
             </label>
@@ -63,6 +64,8 @@ classForBackground=styles.imageContainer;
                 name="beard_service"
                 checked={checkedItems.beard_service || false}
                 onChange={handleCheckboxChange}
+                disabled={checkedItems.groom_services}
+
               />
               Beard trim OR<br></br> shave OR<br></br> facial hair styling
             </label>
@@ -75,6 +78,8 @@ classForBackground=styles.imageContainer;
                 name="scalp_treatments"
                 checked={checkedItems.scalp_treatments || false}
                 onChange={handleCheckboxChange}
+                disabled={checkedItems.groom_services}
+
               />
               Scalp Treatments
             </label>
@@ -87,6 +92,8 @@ classForBackground=styles.imageContainer;
                 name="hair_coloring"
                 checked={checkedItems.hair_coloring || false}
                 onChange={handleCheckboxChange}
+                disabled={checkedItems.groom_services}
+
               />
               Hair Coloring
             </label>
@@ -99,9 +106,10 @@ classForBackground=styles.imageContainer;
                 name="groom_services"
                 checked={checkedItems.groom_services || false}
                 onChange={handleCheckboxChange}
-              />
+                />
               Groom Services
             </label>
+                {checkedItems.groom_services?<p className={styles.noteOfGroomService}>!!when you choose Groom services <br></br>it includes all of services!!</p>:null}
           </li>
         </ul>
 

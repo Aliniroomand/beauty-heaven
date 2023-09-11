@@ -22,6 +22,11 @@ input[type="checkbox"]{
 input[type="checkbox"]:checked{
 background-color: rgb(247, 181, 60);
 }
+input[type="checkbox"]:disabled{
+    background-color: rgb(255, 0, 0);
+    
+
+}
 .listContainer li label{
     color: wheat;
     text-decoration: none;
@@ -72,4 +77,10 @@ background-color: rgb(247, 181, 60);
     margin-top: 5vh;
     margin-bottom: 5vh;
     overflow-y: scroll;
+}
+.noteOfGroomService{
+    font-size:.8rem;
+    margin-top:-5px;
+    color:rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
 }

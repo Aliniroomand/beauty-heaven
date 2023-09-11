@@ -12,18 +12,13 @@ import styles from './BarberList.module.css';
 const BarbersList = ({ services }) => {
   const Barbers = useContext(BarbersContext);
   const [filteredBarbers, setFilteredBarbers] = useState([]);
-// console.log(Barbers);
-//   useEffect(() => {
-//     if (services && services.length > 0) {
-//       const filteredBarbers = Barbers.filter(barber => {
-//         return barber.services && barber.services.includes(services);
-//       });
-//       setFilteredBarbers(filteredBarbers);
-//     } else {
-//       setFilteredBarbers(filteredBarbers);
-//     }
-//   }, [services]);
-
+console.log(Barbers.filter(barber=>barber.services.toString().includes(services.toString())));
+// console.log(services.toString());
+// console.log(Barbers.map(barber=>barber.services));
+// console.log(Barbers[0].services.toString()===services.toString());
+// useEffect(()=>{
+//     setFilteredBarbers(filteredBarbers=Barbers)
+// },[services])
   return (
     <div className={styles.container}>
       <h2 style={{ color: "rgb(250, 100, 0)", fontSize: "1.2rem" }}>
@@ -32,7 +27,7 @@ const BarbersList = ({ services }) => {
       </h2>
 
       <div>
-        {filteredBarbers.length === 100 ?
+        {(filteredBarbers.length) ?
           filteredBarbers.map(barber =>
             <Barber
               key={barber.id}
