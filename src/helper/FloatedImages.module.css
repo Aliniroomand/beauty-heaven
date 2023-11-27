@@ -1,0 +1,66 @@
+.float1,
+.float2,
+.float3,
+.float4,
+.float5,
+.float6,
+.float7{
+    height: 100px;
+    filter: drop-shadow(-3px 3px 2px #000)drop-shadow(1px -1px 2px #ffffff);
+    padding: 5px;
+    position: fixed;
+    z-index: 0;
+    animation: move 15s infinite ;
+}
+.float1{
+right: 5%;
+top: 5%;
+animation-delay: 1s;
+}
+.float2{
+    right: 20%;
+    top: 40%;
+animation-delay: 2s;
+
+}
+.float3{
+    right: 90%;
+    top: 90%;
+animation-delay: 0.5s;
+
+}
+.float4{
+    right: 70%;
+    top: 70%;
+animation-delay: 1.5s;
+
+}
+.float5{
+    left: 20%;
+    top: 40%;
+animation-delay: 2.5s;
+
+}
+.float6{
+    left: 20%;
+    top: 10%;
+animation-delay: 3s;
+
+}
+@keyframes move{
+    0%{
+        transform: translate(0vw ,0vh)rotateZ(0deg);
+    }
+    25%{
+        transform: translate(50vw ,0vh)rotateZ(180deg);
+    }
+    50%{
+        transform: translate(0vw ,0vh)rotateZ(270deg);
+    }
+    75%{
+        transform: translate(-50vw ,0vh)rotateZ(360deg);
+    }
+    100%{
+        transform: translate(0vw ,0vh)rotateZ(0deg);
+    }
+}

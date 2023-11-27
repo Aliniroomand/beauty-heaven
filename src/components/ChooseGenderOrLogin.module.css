@@ -6,6 +6,13 @@
     align-items: center;
     height: 100vh;
 }
+.BG{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 100vh;
+    filter: blur(5px);
+}
 .signArrow{
     position: fixed;
     height: 37rem;
@@ -14,6 +21,8 @@
     z-index: 0;
     filter: drop-shadow(-3px 3px 2px #1f1f1f)
     drop-shadow(-3px 3px 5px #242424);
+    animation: tilt-in 1s;
+
 }
 .chooseGender h1{
     font-size: 2rem;
@@ -22,7 +31,11 @@
     bottom: calc(70% + 1.7rem);
     width: 200px;
     right: calc(50% - 7rem);
-    text-shadow:var(--textShadowLight)
+    text-shadow:var(--textShadowLight);
+    animation: tilt-in 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+
 
 }
 .men img,
@@ -33,6 +46,11 @@
     position: fixed;
     z-index: 1;
     filter:drop-shadow(0px 0px 3px #ffffff);
+    animation: tilt-in 1s;
+    animation-delay: 1s;
+    animation-fill-mode:backwards;
+
+
 }
 .men img{
 right: calc(50% - 7rem);
@@ -50,6 +68,10 @@ bottom: calc(50% + 3.55rem);
     font-size: 2rem;
     color: var(--abiTire);
     text-shadow: var(--textShadowLight);
+    animation: tilt-in 1s;
+    animation-delay: 1s;
+    animation-fill-mode:backwards;
+
 }
 .women h3{
     right: calc(50% - 4.5rem);
@@ -58,6 +80,10 @@ bottom: calc(50% + 3.55rem);
     font-size: 2rem;
     color: var(--abiTire);
     text-shadow: var(--textShadowLight);
+    animation: tilt-in 1s;
+    animation-delay: 1s;
+    animation-fill-mode:backwards;
+
 }
 .men:hover > * ,
 .women:hover > *{
@@ -73,6 +99,9 @@ bottom: calc(50% + 3.55rem);
     bottom: calc(30% - 2rem);
     transform: rotateZ(-5deg);
     right: calc(50% + 2rem);
+    animation: tilt-in 1s;
+    animation-delay: 1s;
+    animation-fill-mode:backwards;
 }
 .login h3,
 .website h3{
@@ -84,6 +113,9 @@ bottom: calc(50% + 3.55rem);
     letter-spacing: -2.5px;
     color: var(--abiTire);
     text-shadow: var(--textShadowLight);
+    animation: tilt-in 1s;
+    animation-delay: 1s;
+    animation-fill-mode:backwards;
 }
 .login:hover > *,
 .website:hover > *{
@@ -103,11 +135,96 @@ bottom: calc(50% + 3.55rem);
     bottom: calc(20% - 7rem);
     transform: rotateZ(10deg);
     right: calc(40% - 1rem);
+    animation: tilt-in 1s;
+    animation-delay: 1s;
+    animation-fill-mode:backwards;
 }
 .website h3{
     right: calc(50% - 3rem);
     transform: rotateZ(10deg);
     font-size: 3rem;
     bottom: calc(20% - 3.9rem);
+    animation: tilt-in 1s;
+    animation-delay: 1s;
+    animation-fill-mode:backwards;
 }
 
+/* animations */
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: backwards;
+    }
+    @-webkit-keyframes slideInUp {
+    0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+    }
+    @keyframes slideInUp {
+    0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+    } 
+
+    @keyframes appear {
+			
+		0% {
+			transform:translateZ(-800px) rotateX(90deg);
+			opacity:0;
+		}
+		50% {
+			transform:translateZ(-160px) rotateX(87deg);
+			opacity:1;
+		}
+		100% {
+			transform:translateZ(0) rotateX(0);
+		}
+	}
+
+    @keyframes tilt-in {
+		0% {
+			transform:translateY(-500px);
+			animation-timing-function:ease-in;
+			opacity:0;
+		}
+		35% {
+			transform:translateY(0);
+			animation-timing-function:ease-out;
+			opacity:1;
+		}
+		55% {
+			transform:translateY(-65px);
+			animation-timing-function:ease-in;
+		}
+		70% {
+			transform:translateY(0);
+			animation-timing-function:ease-out;
+		}
+		80% {
+			transform:translateY(-28px);
+			animation-timing-function:ease-in;
+		}
+		95% {
+			transform:translateY(-8px);
+			animation-timing-function:ease-in;
+		}
+		100% {
+			transform:translateY(0);
+			animation-timing-function:ease-out;
+		}
+	}

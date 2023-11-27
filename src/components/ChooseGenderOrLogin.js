@@ -8,12 +8,18 @@ import manGender from '../assets/men first page logo.png'
 import website from '../assets/website.png'
 import womanGender from '../assets/women first page logo.png'
 import adminPanel from '../assets/adminPanel.png'
+import BG from '../assets/BG2.jpg'
 // import Login from './Login';
+
 import signArrow from "../assets/signs57.png"
 
+// components
+import FloatedImages from '../helper/FloatedImages'
 const ChooseGenderOrLogin = () => {
     return (           
         <div className={styles.container}>
+            <img className={styles.BG} src={BG} alt='BG' />
+            <FloatedImages/>
             <img className={styles.signArrow} src={signArrow} alt='signArrow' />
             <div className={styles.chooseGender}>
                 <h1>Where do you want to go ?! </h1>
