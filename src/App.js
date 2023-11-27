@@ -4,7 +4,7 @@ import BarbersContextProvider from './context/BarbersContextProvider';
 //Components
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 //styles
 import styles from"./App.module.css"
 
@@ -14,7 +14,7 @@ function App() {
       <BarbersContextProvider>
         <Navbar/>
       <Landing/>
-      <Footer/>
+      {/* <Footer/> */}
       </BarbersContextProvider>
     </div>
   );
