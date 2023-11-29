@@ -4,6 +4,9 @@ import styles from './MenServices.module.css';
 //components
 import BarbersList from './BarbersList';
 
+//images
+import BG from '../../assets/Men-images-services/BarberDesk.png'
+
 
 const MenServices = () => {
   const [checkedItems, setCheckedItems] = useState({});
@@ -19,27 +22,12 @@ const MenServices = () => {
   
   //for showing what services are choosen
   const choosedServices = Object.keys(checkedItems).filter((key) => checkedItems[key] === true);
-  
-  
-//this part is for changing image_______
-let classForBackground = styles.imageContainer;
-
-if(choosedServices.join("").includes("groom_services")) { 
-classForBackground = styles.groom_services }
-else{
-classForBackground=styles.imageContainer
-}
-
-  
-//____________________
 
   
   return (
     <>
     <div className={styles.container}>
-      <div className={classForBackground}>
-
-      </div>
+      <img className={styles.BG} src={BG} alt='BG'/>
       <div>
       <form  >
         <ul className={styles.listContainer}>

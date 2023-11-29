@@ -11,13 +11,14 @@ const Navbar = () => {
     return (
         <div className={styles.container}>
             <Link to="/">
-            <img src={Logo} alt='logo'/>
+            <img src={Logo} alt='logo' />
             </Link>
                 
             <ul>
                 <li>services</li>
                 <li>barbers</li>
                 <li>hairDressers\beauticians</li>
+                
             </ul>
         </div>
     );

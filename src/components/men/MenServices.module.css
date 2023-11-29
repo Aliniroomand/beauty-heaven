@@ -4,11 +4,20 @@
     align-items: stretch;
     justify-content: space-between;
 }
-
+.BG{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
 .listContainer{
     list-style: none;
     font-size: 1.9rem;
-    color:rgb(252, 184, 58)
+    color:var(--goldTire);
+    position: fixed;
+    text-shadow: var(--textShadowLight);
 }
 
 
@@ -20,71 +29,82 @@ input[type="checkbox"]{
     border: 2px solid white;
 }
 input[type="checkbox"]:checked{
-background-color: rgb(247, 181, 60);
+background-color: var(--goldRoshan);
 }
 input[type="checkbox"]:disabled{
     background-color: rgb(255, 0, 0);
     
 
 }
+
 .listContainer li label{
-    color: wheat;
+    color: var(--goldRoshan);
+    text-shadow: 0 0 2px #000;
+    transition: .5s;
     text-decoration: none;
 }
 .listContainer li label:hover{
     cursor: pointer;
 }
-.listContainer li:hover{
-    transform: scale(1.2);
-    transition: .2s;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.listContainer li:hover > label{
+    transition: .3s;
+color: var(--abiTire);
 }
-.searchButton{
-    width: 300px;
-    height:40px;
-    cursor: pointer;
-    border-radius: 30px;
-    font-size: 1.5rem;
-    background-color:rgb(252, 184, 58);
-    
-}
-.searchButton:hover{
-   color:rgb(252, 184, 58);
-   background-color: black;
-   transition: .3s;
-}
-/* for changing images */
-.imageContainer{
-    background:url(../../assets/Men-images-services/men-services-BG.png);
-}
-.groom_services{
-    background:url(../../assets/Men-images-services/groom.png);
-}
-.imageContainer ,
-.groom_services{
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 430px;
-    width: 380px;
-    margin-left: 20px;
-    border-radius: 50px;
-}
+
 
 .barbersList{
-    height: 68vh;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    padding-right: 5vh;
+    height: 25rem;
     overflow-y: scroll;
-    overflow-x: hidden;
 }
 .noteOfGroomService{
-    font-size:.8rem;
-    margin-top:-5px;
-    color:rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    width: 40vw;
-    border-radius: 50%;
+    font-size:1.5rem;
+    color:var(--abiTire);
+    background-color: var(--goldRoshan);
+    width: 10rem;
+    border-radius: 50px;
+    animation: shake-center 1s ;
+    position: fixed;
+    left: calc(50% - 10rem);
+    top: calc(50% - 10rem);
+    padding: 20px;
 
+}
+
+@keyframes shake-center {
+			
+    0% {
+        transform:rotate(0deg);
+        transform-origin:50% 50%;
+    }
+    10% {
+        transform:rotate(8deg);
+    }
+    20% {
+        transform:rotate(-10deg);
+    }
+    30% {
+        transform:rotate(10deg);
+    }
+    40% {
+        transform:rotate(-10deg);
+    }
+    50% {
+        transform:rotate(10deg);
+    }
+    60% {
+        transform:rotate(-10deg);
+    }
+    70% {
+        transform:rotate(10deg);
+    }
+    80% {
+        transform:rotate(-8deg);
+    }
+    90% {
+        transform:rotate(8deg);
+    }
+    100% {
+        transform:rotate(0deg);
+        transform-origin:50% 50%;
+    }
 }

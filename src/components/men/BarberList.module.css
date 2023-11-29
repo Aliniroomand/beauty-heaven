@@ -1,5 +1,14 @@
 .container{
-    width: 300px;
+    top: 7rem;
+    left: 0;
+    /* width: 10rem; */
+
+}
+.container h2{
+
+position: relative;
+color: var(--goldRoshan);
+animation: focus-in-contract 1s;
 }
 ::-webkit-scrollbar {
     width: 15px;
@@ -36,3 +45,33 @@
     z-index:1;
     border-radius: 50%;
  }
+ .nothingFound{
+  font-size: 2rem;
+  color: var(--goldRoshan);
+  z-index: 10;
+  padding: 20px;
+  border-radius: 100px;
+  animation: focus-in-contract .5s ;
+  text-wrap: nowrap;
+}
+
+.containerOfList{
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 6px;
+height: 3rem;
+
+}
+@keyframes focus-in-contract {
+    
+  0% {
+    letter-spacing:1em;
+    filter:blur(12px);
+    opacity:0;
+  }
+  100% {
+    filter:blur(0);
+    opacity:1;
+  }
+}
