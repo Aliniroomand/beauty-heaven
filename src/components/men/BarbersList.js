@@ -19,25 +19,29 @@ filtered=Barbers
 filtered =Barbers.filter(barber => barber.services.sort().toString().includes( services.sort().toString()))
 
 }
+
   return (
     <div className={styles.container}>
-      <h2 style={{ color: "rgb(250, 100, 0)", fontSize: "1.2rem" }}>
+      <h2>
         {`List of Barbers:`}<br />
         {`total: ${filtered.length} persons`}
       </h2>
-      <div>
-        {(filtered.length) ?
-          filtered.map(barber =>
-            <Barber
-              key={barber.id}
-              barberData={barber}
-            />)
-          :
-          <div className={styles.loadingPart}>
-            <img src={menLoading} alt="loading" />
-            <figcaption>LOADING</figcaption>
-          </div>
-        }
+      <div className={styles.containerOfList}>
+{
+
+      filtered.length ? (
+    filtered.map(barber => (
+      <Barber key={barber.id} barberData={barber} />
+    ))
+  ) : services.length > 0 ? (
+    <h1 className={styles.nothingFound}>Nothing Found ...</h1>
+  ) : (
+    <div className={styles.loadingPart}>
+      <img src={menLoading} alt="loading" />
+      <figcaption>LOADING</figcaption>
+    </div>
+  )
+}
       </div>
     </div>
   );

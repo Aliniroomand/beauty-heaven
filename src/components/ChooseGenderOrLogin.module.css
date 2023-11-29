@@ -11,7 +11,7 @@
     width: 100vw;
     top: 0;
     height: 100vh;
-    filter: blur(5px);
+    filter: blur(2.5px);
 }
 .signArrow{
     position: fixed;

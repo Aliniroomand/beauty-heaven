@@ -18,6 +18,7 @@ const BarbersContextProvider = (props) => {
 
     const newData = data.map(item => {
         let services = ['haircut'];
+        let VIP = false;
         //The purpose of this number modulo operation is solely to simulate the provided services,
         // and it does not serve any practical purpose when using the actual and original API.
           if (item.id % 2 === 0 ) {
@@ -29,9 +30,12 @@ const BarbersContextProvider = (props) => {
           if (item.id % 4 === 0) {
             services.push('beard_service','scalp_treatments','hair_coloring','groom_services');
           }
+          if (item.id <= 3){
+            VIP=true
+          }
 
         
-        return { ...item, services };
+        return { ...item, services , VIP };
       });
     return (
         <BarbersContext.Provider value={newData}>
