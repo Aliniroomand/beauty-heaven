@@ -1,7 +1,6 @@
 .container{
     top: 7rem;
-    left: 0;
-    /* width: 10rem; */
+
 
 }
 .container h2{
@@ -30,18 +29,22 @@ animation: focus-in-contract 1s;
   }
  
   .loadingPart figcaption{
-    position: absolute;
-    right: 100px;
-    bottom: 350px;
+    position: relative;
+    right: calc(50% - 13rem);
+    bottom: calc(50% + 20px);
     color:red;
-    font-size:2.6rem;
+    font-size:3rem;
     z-index:10;
+    font-family: var(--en1);
+    font-weight: 900;
 
 }
+
   .loadingPart img{
     width:200px;
+    height: 300px;
     position:relative;
-    right: 20px;
+    right:calc(50% - 200px);
     z-index:1;
     border-radius: 50%;
  }
@@ -60,8 +63,8 @@ animation: focus-in-contract 1s;
 grid-template-columns: repeat(2, 1fr);
 grid-column-gap: 10px;
 grid-row-gap: 6px;
-height: 3rem;
-
+height: 20rem;
+overflow-y: scroll;
 }
 @keyframes focus-in-contract {
     

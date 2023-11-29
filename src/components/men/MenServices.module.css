@@ -10,7 +10,7 @@
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
 }
 .listContainer{
     list-style: none;
@@ -54,15 +54,15 @@ color: var(--abiTire);
 
 .barbersList{
     height: 25rem;
-    overflow-y: scroll;
 }
 .noteOfGroomService{
     font-size:1.5rem;
     color:var(--abiTire);
-    background-color: var(--goldRoshan);
+    box-shadow:  0 0 20px var(--goldRoshan), 0 0 50px var(--goldTire);
+    background: #f8df22c5;
     width: 10rem;
     border-radius: 50px;
-    animation: shake-center 1s ;
+    animation: shake-center 2s ease-in-out  3;
     position: fixed;
     left: calc(50% - 10rem);
     top: calc(50% - 10rem);
