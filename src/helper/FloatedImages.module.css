@@ -36,13 +36,13 @@ animation-delay: 1.5s;
 
 }
 .float5{
-    left: 20%;
+    left: -20%;
     top: 40%;
 animation-delay: 2.5s;
 
 }
 .float6{
-    left: 20%;
+    left: -20%;
     top: 10%;
 animation-delay: 3s;
 
