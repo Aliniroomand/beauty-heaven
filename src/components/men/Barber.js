@@ -8,13 +8,10 @@ import styles from './Barber.module.css'
 const Barber = ({barberData}) => {
     const [clicked,setClicked]=useState(false)
 
-    const setActiving=(e)=>{
-        setClicked()
-        console.log(e.target.id);
-    }
+
     return (
       <>
-        <div id={barberData.id} onClick={setActiving} className={styles.container}>
+        <div id={barberData.id}  className={styles.container}>
             <div id={barberData.id}className={styles.imageContainer}>
                 <img id={barberData.id} src={barberData.profile_picture} alt='profile'/>
             </div>

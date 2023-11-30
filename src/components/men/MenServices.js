@@ -9,29 +9,56 @@ import BG from '../../assets/Men-images-services/BarberDesk.png'
 
 
 const MenServices = () => {
+  // choose search method
+  const [searchMethod, setSearchMethod] = useState('');
+
+// part for based on sevices
   const [checkedItems, setCheckedItems] = useState({});
 
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
+    if(name === "groom_services" ){
+      setCheckedItems(() => ({
+        [name]: checked,
+      }))
+    }else{
     setCheckedItems((event) => ({
       ...event,
       [name]: checked,
-    }));
+    }));}
     
   };
   
-  //for showing what services are choosen
+    //for showing what services are choosen
   const choosedServices = Object.keys(checkedItems).filter((key) => checkedItems[key] === true);
+  // _______________
 
+//for search by LOC
+const [searchLocation,setSearchLocation]=useState("");
+const search_by_Location=(e)=>{
+  setSearchLocation(e.target.value)
+}
   
   return (
     <>
     <div className={styles.container}>
       <img className={styles.BG} src={BG} alt='BG'/>
-      <div>
+{/* choose search method */}
+      <div className={styles.selectMethod}>
+      <h1>Choose search method</h1>
+      <div className={styles.buttonContainer}>
+        <button onClick={()=>setSearchMethod('location')}>By Location</button>
+        <button onClick={()=>setSearchMethod('services')}>By Services</button>
+      </div>
+      </div>
+{
+  (searchMethod === 'services') ?
+  <>
+  {/* search by services  */}
+    <div>
       <form  >
         <ul className={styles.listContainer}>
-            <h3>choose what service or services do you need</h3>
+            <h3>choose what<br/> service or services<br/> do you need</h3>
           <li>
             <label htmlFor="haircut">
               <input
@@ -98,15 +125,28 @@ const MenServices = () => {
                 />
               Groom Services
             </label>
-                {checkedItems.groom_services?<p className={styles.noteOfGroomService}>!!when you choose Groom services <br></br>it includes all of services!!</p>:null}
+                {checkedItems.groom_services?<p className={styles.noteOfGroomService}>!!when you choose Groom services it includes all of services!!</p>:null}
           </li>
         </ul>
 
       </form>
-      </div>
+    </div>
+    {/* // ____________ */}
+  </>
+: (searchMethod === "location") &&
+// {/* search by location */}
+    <div className={styles.searchByLocation}>
+      <h2>Enter Name <br/>Or <br/> Location to find ...</h2>
+      <input placeholder='Loacation includes country,city,street,...' type='text' onChange={search_by_Location}/>
+    </div>
+    // ____________
+
+}
         <div className={styles.barbersList}>
         {<BarbersList
           services={choosedServices}
+          searchByLocation={searchLocation}
+          searchMethod={searchMethod}
          />}
       </div>
     </div>
