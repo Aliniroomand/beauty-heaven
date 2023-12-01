@@ -16,7 +16,8 @@ import signArrow from "../assets/signs57.png"
 // components
 import FloatedImages from '../helper/FloatedImages'
 const ChooseGenderOrLogin = () => {
-    return (           
+    return (         
+
         <div className={styles.container}>
             <img className={styles.BG} src={BG} alt='BG' />
             <FloatedImages/>
@@ -58,7 +59,9 @@ const ChooseGenderOrLogin = () => {
             </div> */}
             
         </div>    
+        
         );
+
 };
 
 export default ChooseGenderOrLogin;

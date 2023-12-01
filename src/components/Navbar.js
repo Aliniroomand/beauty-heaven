@@ -5,10 +5,13 @@ import { Link } from 'react-router-dom';
 import Logo from "../assets/mainLogo.png"
 //style
 import styles from "./Navbar.module.css"
+//transition
+import PagesTransition from '../helper/PagesTransition';
 
 const Navbar = () => {
 
     return (
+<PagesTransition>
         <div className={styles.container}>
             <Link to="/">
             <img src={Logo} alt='logo' />
@@ -21,6 +24,7 @@ const Navbar = () => {
                 
             </ul>
         </div>
+    </PagesTransition>
     );
 };
 
