@@ -4,9 +4,14 @@ import { useNavigate } from 'react-router-dom';
 
 const BackButton = () => {
     const navigate=useNavigate()
+
+   const addExitAnimation=(e)=>{
+        navigate(-1)
+        
+   }
     return (
         <div>
-    <button onClick={()=>navigate(-1)} className={styles.return}>Return</button>
+    <button onClick={addExitAnimation} className={styles.return}>Return</button>
         </div>
     );
 };
