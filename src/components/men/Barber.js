@@ -6,22 +6,21 @@ import styles from './Barber.module.css'
 
 
 const Barber = ({barberData}) => {
-  
+
     return (
       <>
-      <Link style={{textDecoration:"none"}} to={`/menservices/${barberData.id}`}>
-        <div className={styles.container}>
-            <div className={styles.imageContainer}>
+        <Link to={`/menservices/${barberData.id}`} className={styles.container}>
+            <div id={barberData.id}className={styles.imageContainer}>
                 <img src={barberData.profile_picture} alt='profile'/>
             </div>
-            <div className={styles.textContainer}>
-                <h3>name :<span> {barberData.first_name} {barberData.last_name}</span></h3>
-                <h3>gender : <span>{barberData.gender}</span></h3>
-                <h3>city : <span>{barberData.city}</span></h3>
-                
+            <div  className={styles.textContainer}>
+                <span className={styles.VIP}>
+                {barberData.VIP&& <h3 >VIP</h3>}
+                </span>
+                <h3 >name :<span id={barberData.id}> {barberData.first_name} {barberData.last_name}</span></h3>
+                <h3 >gender : <span id={barberData.id}>{barberData.gender}</span></h3>
+                <h3 >city : <span id={barberData.id}>{barberData.city}</span></h3>
             </div>
-            
-        </div>
         </Link>
         </>
         );

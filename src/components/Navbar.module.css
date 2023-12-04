@@ -5,22 +5,24 @@
     background-color: rgba(240, 248, 255, 0.555);
     padding-inline: 10px;
     border-radius: 30px;
-    height: 10vh;
+    height: 8vh;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
+    font-family: var(--en1);
     
 }
 .container img{
-    width: 50px;
-    border-radius: 50%;
-    background-color: rgba(97, 97, 97, 0.555);
+transition: 0.3s;
+width: 50px;
 }
-.container a{
-    margin-top: 7px;
+.container img:hover{
+transform: scale(1.1);
+transition: 0.3s;
 }
+
 .container ul {
     display: flex;
 align-items: center;
@@ -28,7 +30,7 @@ align-items: center;
 .container ul li{
     list-style: none;
     padding-inline: 12px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 .container ul li:hover{

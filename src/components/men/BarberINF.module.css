@@ -1,32 +1,136 @@
+.mainBG{
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    filter: blur(2px);
+    z-index: -1;
+}
+
 .container{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 150px auto;
-    background: #b3aeaebb;
-    width: 60vw;
-    padding: 20px 30px;
-    backdrop-filter: blur(1px);
-    border-radius: 30px;
-    box-shadow: 4px 4px 8px rgb(0, 0, 0), -4px -4px 8px rgba(255, 255, 255, 0.5),
-    inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.5);;
-    animation: bounceIn;
-    animation-duration: .5s;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    animation: bounceIn 0.5s ease;
+    top: 0;
+    position: relative;
+}
+
+.informations{
+width: 60%;
+height: 100%;
+border-radius: 50px;
+box-shadow: 0 0 20px ;
+background: rgba(167, 167, 167, 0.384);
+top: 0;
 
 }
-.container img{
-    width: 200px;
-    border-radius: 50%;
+.imageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 30%;
+    margin: 10px 0 20px;
+    position: relative;
+}
+.VIP figure{
+    left: 0;
+}
+.VIP img{
+    position: absolute;
+    width: 6rem;
+    z-index: 5;
+    left: 0;
+    top: -1rem;
+    transform: rotateZ(-20deg);
+}
+.VIP figcaption{
+    position: absolute;
+    z-index: 6;
+    font-size: 1.7rem;
+    left: 3.1rem;
+    top: 1.35rem;
+    transform: rotateZ(-40deg);
+    text-shadow: 0 0 5px ,0 0 2px #fff;
+}
+.profileIMG{
+    position: absolute;
+    width: 13rem;
+    height: 12rem;
+    left: 3rem;
+    top: 1rem;
+border-radius: 0 50px 50px;
+    z-index: 4;
+
+
+}
+.imageContainer p{
+    color: var(--goldRoshan);
+    font-size: 2rem;
+    text-shadow: 0 0 5px #000;
+}
+.imageContainer p span{
+    color: var(--abiRoshan);
+    font-weight: 900;
+
+}
+.textContainer{
+border-radius: 30px;
+height: 70%;
+position: relative;
+}
+.personal_info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-inline: 30px;
+    color: var(--goldTire);
+    text-shadow: 0 0 2px #000;
+}
+.personal_info h1{
+font-family: var(--en1);
+color: var(--goldRoshan);
+padding: 10px;
+left: 0;
+position: sticky;
+box-shadow:0px 0px 5px #0000008c,5px -5px 5px #0000008f,inset -5px 5px 5px #ffffff7c,inset -5px -5px 5px #ffffff7c  ;
+border-radius: 50px;
+}
+.personal_info p{
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 3px #fff;
+}
+.personal_info p span{
+    font-size: 1.2rem;
+    color: var(--goldTire);
+    text-shadow: 0 0 5px #000;
+}
+
+
+
+
+
+.reservation{
+    width: 30%;
+    background: #000;
 }
 .loadingPart{
-    color: red;
-    font-size: 3rem;
+    color: var(--goldTire);
+    font-size: 4rem;
     margin: 250px ;
+    text-shadow: 0 0 1px #fff,0 0 5px #000,0 0 20px #000;
+    animation:  wobble-hor-bottom 0.5s ease infinite;
+    
 }
 .textContainer span{
-    font-size: 1.2rem;
-    color: rgb(219, 0, 0);
-    font-weight: 600;
+
 }
 .textContainer {
     font-size: 1.4rem;
@@ -124,3 +228,31 @@
     transform: scale3d(1, 1, 1);
     }
     } 
+
+
+    @keyframes wobble-hor-bottom {
+			
+		0% {
+			transform:translateX(0%);
+			transform-origin:50% 50%;
+		}
+		15% {
+			transform:translateX(-30px) rotate(-6deg);
+		}
+		30% {
+			transform:translateX(15px) rotate(6deg);
+		}
+		45% {
+			transform:translateX(-15px) rotate(-3.6deg);
+		}
+		60% {
+			transform:translateX(9px) rotate(2.4deg);
+		}
+		75% {
+			transform:translateX(-6px) rotate(-1.2deg);
+		}
+		100% {
+			transform:translateX(0%);
+			transform-origin:50% 50%;
+		}
+	}

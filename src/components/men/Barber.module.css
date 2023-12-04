@@ -6,9 +6,10 @@
     border: 1px solid gray;
     background-color: rgba(128, 128, 128, 0.349);
     margin-bottom: 5px;
-    padding: 5px 10px;
+    padding: 5px 10px 5px 20px;
     backdrop-filter: blur(2px);
     border-radius: 30px;
+    text-decoration: none;
 }
 .imageContainer img{
     width:50px;
@@ -19,18 +20,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 20px;
+    padding-left: 10px;
+    text-wrap: nowrap;
 }
 .textContainer h3{
-    color:rgb(212, 127, 0);;
+    color:var(--goldTire);
     padding: 0;
     margin: 0;
     font-size: 1rem;
+    text-shadow: 0 0 3px #000000;
+    
 }
 .textContainer h3 span{
-    color:rgb(252, 184, 58);
+    color:var(--abiRoshan);
+    text-shadow: 0 0 2px #000000;
+    
 }
-
+.VIP h3{
+    position: fixed;
+    background: var(--goldTire);
+    top: 0px;
+    left: 5px;
+    padding: 0px 10px;
+    
+    font-size: 0.7rem;
+    font-weight: 900;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: var(--abiTire);
+    z-index: 0;
+}
 
 
 

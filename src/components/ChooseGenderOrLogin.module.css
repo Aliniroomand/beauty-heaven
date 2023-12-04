@@ -11,7 +11,7 @@
     width: 100vw;
     top: 0;
     height: 100vh;
-    filter: blur(5px);
+    filter: blur(2.5px);
 }
 .signArrow{
     position: fixed;
@@ -27,7 +27,7 @@
 .chooseGender h1{
     font-size: 2rem;
     position: fixed;
-    color: var(--abiTire);
+    color: #000;
     bottom: calc(70% + 1.7rem);
     width: 200px;
     right: calc(50% - 7rem);
@@ -71,6 +71,7 @@ bottom: calc(50% + 3.55rem);
     animation: tilt-in 1s;
     animation-delay: 1s;
     animation-fill-mode:backwards;
+    transition: .3s;
 
 }
 .women h3{
@@ -91,6 +92,7 @@ bottom: calc(50% + 3.55rem);
     transform: scaleX(1.07);
     transition: 0.5s;
     filter: drop-shadow(0 0 5px #fff);
+    color: #000;
 }
 .login img{
     height: 6rem;
@@ -123,6 +125,7 @@ bottom: calc(50% + 3.55rem);
     transform: scaleX(1.07) rotateZ(-5deg);
     transition: 0.5s;
     filter: drop-shadow(0 0 5px #fff);
+    color: #000;
 }
 .website:hover > *{
     transform: scaleX(1.07) rotateZ(10deg);
