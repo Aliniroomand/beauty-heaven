@@ -1,9 +1,15 @@
 import React from 'react';
 
+import ComingSoon from './ComingSoon';
+
+//styles
+import styles from './WomenServices.module.css'
+
 const WomenServices = () => {
     return (
-        <div style={{color:"white"}}>
-            womenservices
+
+        <div >
+            <ComingSoon/>
         </div>
     );
 };

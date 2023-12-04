@@ -53,7 +53,7 @@ if (searchMethod === "location"){
       : 
         (searchMethod !== "location" && searchMethod !== "services" )?
           <h1 className={styles.selectMethodError}>Please select a method</h1>
-      : (searchMethod === "location" || searchMethod === "services" && services.length > 0 ) ?
+      : ((searchMethod === "location" || searchMethod === "services") && services.length > 0 ) ?
       <h1 className={styles.nothingFound}>Nothing Found ...</h1>
         :
   

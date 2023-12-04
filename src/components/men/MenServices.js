@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+//styles
 import styles from './MenServices.module.css';
 
 //components
@@ -6,7 +7,9 @@ import BarbersList from './BarbersList';
 
 //images
 import BG from '../../assets/Men-images-services/BarberDesk.png'
-
+import BackButton from '../../helper/BackButton';
+//transition
+import PagesTransition from '../../helper/PagesTransition'
 
 const MenServices = () => {
   // choose search method
@@ -39,16 +42,18 @@ const search_by_Location=(e)=>{
   setSearchLocation(e.target.value)
 }
   
+// ____________________
   return (
     <>
+    <PagesTransition>
     <div className={styles.container}>
       <img className={styles.BG} src={BG} alt='BG'/>
 {/* choose search method */}
       <div className={styles.selectMethod}>
       <h1>Choose search method</h1>
       <div className={styles.buttonContainer}>
-        <button onClick={()=>setSearchMethod('location')}>By Location</button>
-        <button onClick={()=>setSearchMethod('services')}>By Services</button>
+        <button onClick={()=>setSearchMethod('location')}>Location Or Name</button>
+        <button onClick={()=>setSearchMethod('services')}>Services</button>
       </div>
       </div>
 {
@@ -150,7 +155,10 @@ const search_by_Location=(e)=>{
          />}
       </div>
     </div>
+          <BackButton/>
+    </PagesTransition>
       </>
+
   );
 };
 

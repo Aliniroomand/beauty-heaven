@@ -32,7 +32,7 @@ const BarbersContextProvider = (props) => {
           if (item.id % 4 === 0) {
             services.push('beard_service','scalp_treatments','hair_coloring','groom_services');
           }
-          if (item.id <= 3){
+          if (item.id <= 5 || item.id % 4 === 0){
             VIP=true
           }
 
