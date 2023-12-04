@@ -38,7 +38,7 @@ const ChooseGenderOrLogin = () => {
                     </div>                   
             </div>
                 <div >
-                    <Link className={styles.login}> 
+                    <Link to='UserPanel' className={styles.login}> 
                         <img src={adminPanel} alt='adminPanel'/>
                         <h3>
                             User Panel
@@ -46,7 +46,7 @@ const ChooseGenderOrLogin = () => {
                     </Link>
                 </div>
                 <div >
-                    <Link className={styles.website}> 
+                    <Link to='/website' className={styles.website}> 
                         <img src={website} alt='website'/>
                         <h3>
                             Website

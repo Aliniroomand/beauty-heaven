@@ -1,9 +1,11 @@
 import { Route,Routes ,Navigate } from 'react-router-dom';
-// contex
+// components
 import ChooseGenderOrLogin from './ChooseGenderOrLogin';
 import MenServices from './men/MenServices';
 import WomenServices from './women/WomenServices';
 import BarberINF from './men/BarberINF';
+import Website from './web/Website';
+import UserPanel from './admin/UserPanel';
 //styles
 import styles from "./Landing.module.css"
 
@@ -11,6 +13,8 @@ const Landing = () => {
     return (
         <div className={styles.container}>
       <Routes>
+        <Route path="/UserPanel" element={<UserPanel />} />
+        <Route path="/Website" element={<Website/>} />
         <Route path="/menservices/:id" element={<BarberINF/>}/>
         <Route path="/womenservices" element={<WomenServices />} />
         <Route path="/menservices" element={<MenServices />} />
