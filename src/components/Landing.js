@@ -2,7 +2,7 @@ import { Route,Routes ,Navigate } from 'react-router-dom';
 // contex
 import ChooseGenderOrLogin from './ChooseGenderOrLogin';
 import MenServices from './men/MenServices';
-import WomenServices from './WomenServices';
+import WomenServices from './women/WomenServices';
 import BarberINF from './men/BarberINF';
 //styles
 import styles from "./Landing.module.css"
