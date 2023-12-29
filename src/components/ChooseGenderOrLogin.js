@@ -22,37 +22,37 @@ const ChooseGenderOrLogin = () => {
             <img className={styles.BG} src={BG} alt='BG' />
             <FloatedImages/>
             <img className={styles.signArrow} src={signArrow} alt='signArrow' />
-            <div className={styles.chooseGender}>
+        <section className={styles.links_container}>
+                <div className={styles.main_title}>
                 <h1>Where do you want to go ?! </h1>
-                    <div className={styles.imageContainer}>
+                </div>
+                <div className={styles.men_chooseGender}>
                         <Link className={styles.men}
                             to="/menservices">
                                 <h3>Men services</h3>
-                            <img src={manGender} alt='men-services-logo' />
                         </Link>
+                            <img src={manGender} alt='men-services-logo' />
+                </div>
+                <div className={styles.women_chooseGender}>
                         <Link className={styles.women}
                             to='/womenservices'>
                                 <h3>Women Services</h3>
-                            <img src={womanGender}  alt='women-services-logo'/>
                         </Link> 
-                    </div>                   
-            </div>
-                <div >
-                    <Link to='UserPanel' className={styles.login}> 
-                        <img src={adminPanel} alt='adminPanel'/>
-                        <h3>
+                        <img src={womanGender}  alt='women-services-logo'/>
+                </div>                   
+                <div className={styles.login_container}>
+                        <Link to='UserPanel' className={styles.login}> 
                             User Panel
-                        </h3>
-                    </Link>
+                        </Link>
+                        <img src={adminPanel} alt='adminPanel'/>
                 </div>
-                <div >
+                <div className={styles.website_container}>
                     <Link to='/website' className={styles.website}> 
-                        <img src={website} alt='website'/>
-                        <h3>
                             Website
-                        </h3>
                     </Link>
+                    <img src={website} alt='website'/>
                 </div>
+            </section>
             {/* <div className={styles.login}>
                 <h2>Or if you have account , Login:</h2>
                 <Login/>

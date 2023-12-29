@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const BackButton = () => {
     const navigate=useNavigate()
 
-   const addExitAnimation=(e)=>{
+   const addExitAnimation=()=>{
         navigate(-1)
         
    }
