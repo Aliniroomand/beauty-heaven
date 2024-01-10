@@ -88,7 +88,7 @@ const search_by_Location=(e)=>{
                 disabled={checkedItems.groom_services}
 
               />
-              Beard trim OR<br></br> shave OR<br></br> facial hair styling
+              Beard services
             </label>
           </li>
           <li>

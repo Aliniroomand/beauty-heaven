@@ -56,7 +56,7 @@ const BarberINF = () => {
                 <div className={styles.container}>
                     <div className={styles.informations}>
                         <div className={styles.imageContainer}>
-                            <div className={styles.VIP}>
+                            {/* <div className={styles.VIP}>
                                 {
                                 (VIP) &&
                                 <figure>
@@ -66,7 +66,7 @@ const BarberINF = () => {
                                     </figcaption>
                                 </figure>
                                 }
-                            </div>
+                            </div> */}
                             <img className={styles.profileIMG} src={profile_picture} alt='profile_picture'/>
                             <p><span>Name : </span> {first_name} {last_name} </p>
                         </div>
