@@ -54,9 +54,8 @@ const BarberINF = () => {
             {!isLoading ? 
             <>
                 <div className={styles.container}>
-                    <div className={styles.informations}>
-                        <div className={styles.imageContainer}>
-                            {/* <div className={styles.VIP}>
+                <div className={styles.imageContainer}>
+                            {/* <section className={styles.VIP}>
                                 {
                                 (VIP) &&
                                 <figure>
@@ -66,11 +65,12 @@ const BarberINF = () => {
                                     </figcaption>
                                 </figure>
                                 }
-                            </div> */}
+                            </section> */}
                             <img className={styles.profileIMG} src={profile_picture} alt='profile_picture'/>
                             <p><span>Name : </span> {first_name} {last_name} </p>
-                        </div>
-                        <div className={styles.textContainer}>
+                    </div>
+                    
+                    <div className={styles.informations}>
                             <section className={styles.personal_info}>
                                 <h1>Who Is He/She?</h1>
                                     <p><span>Gender : </span> {gender}</p>
@@ -79,19 +79,26 @@ const BarberINF = () => {
                                     <p><span>Date Of Birth : </span> {date_of_birth}</p>
                                     <p><span>Services : </span> {shown_services}</p>
                             </section>
-                        <Link to={"/menservices"}><button>back</button></Link>
-                        <Link><button>reserve Time</button></Link>
-                        </div>
+                        <section className={styles.clientsExperiences_container}>
+
+                        </section>
+                        <section className={styles.reservation}>
+                            <h1>time reservation</h1>
+                        </section>
                     </div>
-                    <div className={styles.reservation}>
-                        <h1>time reservation</h1>
+                
+                    <div className={styles.title_container}>
+                        <ul>
+                            <li>informations</li>
+                            <li>clients experience</li>
+                            <li>time reservation</li>
+                        </ul>
                     </div>
                 </div>
-            </>:
-
-            <div className={styles.loadingPart}>
+            </>
+            :<section className={styles.loadingPart}>
             <h1>LOADING</h1>
-          </div>
+          </section>
           }
           <BackButton/>
 
