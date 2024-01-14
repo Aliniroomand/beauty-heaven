@@ -7,7 +7,6 @@ import BarbersList from './BarbersList';
 
 //images
 import BG from '../../assets/Men-images-services/BarberDesk.png'
-import BackButton from '../../helper/BackButton';
 //transition
 import PagesTransition from '../../helper/PagesTransition'
 
@@ -155,7 +154,6 @@ const search_by_Location=(e)=>{
          />}
       </div>
     </div>
-          <BackButton/>
     </PagesTransition>
       </>
 

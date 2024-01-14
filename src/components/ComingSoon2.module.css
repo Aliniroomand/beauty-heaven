@@ -1,0 +1,56 @@
+.container{
+    position: relative;
+    width: 70%;
+    height: 70% ;
+    border-radius: 100px;
+    left: 15%;
+    animation: focus-in 1s both ;
+}
+.container h1{
+    color: var(--goldTire);
+    font-size: 5rem;
+    text-shadow:  0 0 5px #000,0 0 10px #000,0 0 60px #000;
+animation: focus-in 1s both ;
+}
+.container h3{
+    color: var(--goldTire);
+    font-size: 3rem;
+    text-shadow:  0 0 5px #000,0 0 10px #000,0 0 60px #000;
+    animation: focus-in 1s both ;
+    position: absolute;
+    text-align: center;
+    left: calc(50% - 11rem);
+    z-index: 5;
+}
+.container img{
+    width: 30rem;
+    border-radius: 40%;
+    box-shadow: 0 0 5px #000,0 0 10px #000,0 0 60px #000;
+    animation: focus-in 1s both ;
+    animation-delay: 0.5s;
+    position: relative;
+    z-index: 4;
+}
+
+.BG{
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    filter: blur(2.5px);
+
+}
+
+
+@keyframes focus-in {
+			
+    0% {
+        filter:blur(12px);
+        opacity:0;
+    }
+    100% {
+        filter:blur(0);
+        opacity:1;
+    }
+}

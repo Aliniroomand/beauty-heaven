@@ -24,6 +24,46 @@
     height: 100%;
     left: 75%;
 }
+.title_container ul{
+    height: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.deactived_part{
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background:var(--goldRoshan);
+    box-shadow: 0 0 30px #000 ,inset 0 0 5px #000, inset 0 0 30px #000;
+    border-radius: 50%;
+    height: calc(100% / 3.5);
+    width: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;   
+}
+/* for elements when actived */
+.actived_part{
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    height: calc(100% / 3.5);
+    width: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;   
+    color: var(--goldRoshan);
+    background: #000;
+    box-shadow: 0 0 30px #000,inset 0 0 5px var(--goldRoshan), inset 0 0 30px var(--goldRoshan);
+    transition: 0.3s;
+
+}
 .informations{
 width: 50%;
 height: 100%;
@@ -33,16 +73,20 @@ background: rgba(167, 167, 167, 0.384);
 top: 0;
 left: 25%;
 right: 25%;
+overflow: hidden;
 
 }
 .imageContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-    height: 30%;
-    margin: 10px 0 20px;
     position: relative;
+    background: #ffffff73;
+    height: 60%;
+    backdrop-filter: blur(3px);
+    width: 23%;
+    margin: 5% 1% 10% 1%;
+border-radius: 70px;
+display: flex;
+box-shadow:0px 0px 5px #0000008c,5px -5px 5px #0000008f,inset -5px 5px 5px #ffffff7c,inset -5px -5px 5px #ffffff7c  ;
+
 }
 .VIP figure{
     left: 0;
@@ -70,7 +114,7 @@ right: 25%;
     height: 12rem;
     left: 3rem;
     top: 1rem;
-border-radius: 0 50px 50px;
+border-radius:50px;
     z-index: 4;
 
 
@@ -79,10 +123,14 @@ border-radius: 0 50px 50px;
     color: var(--goldRoshan);
     font-size: 2rem;
     text-shadow: 0 0 5px #000;
+    position: absolute;
+    bottom: 10%;
+    padding-inline: 5%;
 }
 .imageContainer p span{
-    color: var(--abiRoshan);
+    color: var(--abiTire);
     font-weight: 900;
+    text-shadow: 0 0 5px #fff;
 
 }
 .textContainer{
@@ -90,33 +138,48 @@ border-radius: 30px;
 height: 70%;
 position: relative;
 }
+.select_first{
+    font-size: 3rem;
+    top: 30%;
+    position: absolute;
+    padding-inline: 15%;
+    text-shadow:0 0 10px #000, 0 0 3px #000;
+    color: var(--goldTire);
+}
 .personal_info{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items:flex-start;
     justify-content: flex-start;
-    padding-inline: 30px;
+    padding: 10px;
     color: var(--goldTire);
     text-shadow: 0 0 2px #000;
+    font-size: 2rem;
+    height: 100%;
 }
 .personal_info h1{
 font-family: var(--en1);
 color: var(--goldRoshan);
 padding: 10px;
 left: 0;
-position: sticky;
 box-shadow:0px 0px 5px #0000008c,5px -5px 5px #0000008f,inset -5px 5px 5px #ffffff7c,inset -5px -5px 5px #ffffff7c  ;
+align-self: center;
 border-radius: 50px;
+text-shadow: 0 0 10px #000;
 }
 .personal_info p{
-    font-size: 1.5rem;
-    color: rgb(0, 0, 0);
-    text-shadow: 0 0 3px #fff;
+    font-size: 1.7rem;
+    font-family: var(--en2);
+    color:var(--abiTire);
+    text-shadow: 0 0 10px #fff;
+    height: calc(100% / 6);
 }
 .personal_info p span{
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: var(--goldTire);
     text-shadow: 0 0 5px #000;
+    font-family: var(--en2);
+
 }
 
 
@@ -124,8 +187,9 @@ border-radius: 50px;
 
 
 .reservation{
-    width: 30%;
-    background: #000;
+    width: 100%;
+    height: 100%;
+    background: #00000068;
 }
 .loadingPart{
     color: var(--goldTire);
@@ -260,5 +324,53 @@ border-radius: 50px;
 		100% {
 			transform:translateX(0%);
 			transform-origin:50% 50%;
+		}
+	}
+
+    .slide_in {
+
+		animation-name: slide-in-right;
+		animation-duration: 0.5s;
+		animation-timing-function: ease;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: both;
+			
+	}
+	@keyframes slide-in-right {
+			
+		0% {
+			transform:translateX(1000px);
+			opacity:0;
+		}
+		100% {
+			transform:translateX(0);
+			opacity:1;
+		}
+	}
+    .slide_out {
+		width: 100px; height: 100px; background-color:#ffe672; 
+		
+		animation-name: slide-out-left;
+		animation-duration: 0.5s;
+		animation-timing-function: linear;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: none;
+			
+		/* shorthand
+		animation: slide-out-left 1s linear 0s 1 normal none;*/
+	}
+	@keyframes slide-out-left {
+			
+		0% {
+			transform:translateX(0);
+			opacity:1;
+		}
+		100% {
+			transform:translateX(-1000px);
+			opacity:0;
 		}
 	}

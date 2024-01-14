@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate , Link } from 'react-router-dom';
 
 //logo image
 import Logo from "../assets/mainLogo.png"
@@ -9,20 +9,28 @@ import styles from "./Navbar.module.css"
 import PagesTransition from '../helper/PagesTransition';
 
 const Navbar = () => {
+    const navigate=useNavigate()
+    const addExitAnimation=()=>{
+        navigate(-1)
+   }
 
+let[active,setActive]=useState(false)
+const showElements = ()=>{
+        setActive(!active);
+}
     return (
 <PagesTransition>
         <div className={styles.container}>
-            <Link to="/">
-            <img src={Logo} alt='logo' />
-            </Link>
-                
-            <ul>
-                <li>services</li>
-                <li>barbers</li>
-                <li>hairDressers\beauticians</li>
-                
-            </ul>
+                <img onClick={showElements} className={!active ? styles.logo : styles.ClickedLogo} src={Logo} alt='logo' />         
+                <ul  className={`${styles.navItems} ${!active ? styles.roll_out: styles.roll_in}`}>
+                    <Link to="./menservices">Men services</Link>
+                    <li>barbers</li>
+                    <li>hairDressers\beauticians</li>
+                    
+                </ul>
+            <div>
+        <button onClick={addExitAnimation} className={styles.return}>Return</button>
+            </div>
         </div>
     </PagesTransition>
     );
