@@ -7,6 +7,7 @@ import styles from"./BarberINF.module.css"
 
 //components 
 import ComingSoon2 from '../ComingSoon2';
+import Commenting from '../../helper/Commenting';
 
 //images
 import BG from '../../assets/Men-images-services/BarbeDesk.png'
@@ -31,11 +32,10 @@ const BarberINF = () => {
     //for what services they do ...
     
     const barberDetail=INFs.filter(barber=>barber.id === +id);
-    const services=barberDetail[0].services;
-    const VIP=barberDetail[0].VIP;
-    const uniqueServices = Array.from(new Set(services));
+    const servicess=INFs[id]?.services;
+    const VIP=barberDetail[0]?.VIP;
+    const uniqueServices = Array.from(new Set(servicess));
     let shown_services = uniqueServices.join(`// `);
-
 
     //____________________________________
 
@@ -93,7 +93,7 @@ const[actived,setActived]=useState({
                             : 
                             actived.clientEXP?
                         <section className={`${styles.clientsExperiences_container} ${styles.slide_in}`}>
-                            <ComingSoon2/>
+                            <Commenting id={id} />
                         </section>
                         : actived.reserve?
                         <section  className={`${styles.reservation} ${styles.slide_in}`}>
