@@ -7,7 +7,7 @@ import styles from"./BarberINF.module.css"
 
 //components 
 import ComingSoon2 from '../ComingSoon2';
-import Commenting from '../../helper/Commenting';
+import CommentingPart from '../../helper/Commenting/CommentingPart';
 
 //images
 import BG from '../../assets/Men-images-services/BarbeDesk.png'
@@ -43,7 +43,6 @@ const BarberINF = () => {
 const[actived,setActived]=useState({
     infos:false,
     clientEXP:false,
-    reserve:false
 })
     const activing = (e)=>{
         setActived({[e.target.id]:true});
@@ -69,9 +68,19 @@ const[actived,setActived]=useState({
                 <div className={styles.container}>
                 <div className={styles.title_container}>
                         <ul>
+                            <li className={styles.imageContainer}>
+                                <img className={styles.profileIMG} src={profile_picture} alt='profile_picture'/>
+                                <p><span>Name : </span> {first_name} {last_name} </p>
+                                {
+                                 <section className={styles.VIP}>
+                                    {
+                                    (VIP) && <img src={VIPimg} alt="VIP"/>
+                                    }
+                                    </section>
+                                 }
+                            </li>
                             <li  className={actived.infos ? styles.actived_part :  styles.deactived_part} id="infos" onClick={activing} >informations</li>
                             <li  className={actived.clientEXP ? styles.actived_part : styles.deactived_part } id="clientEXP" onClick={activing}>clients experience</li>
-                            <li  className={actived.reserve ? styles.actived_part : styles.deactived_part } id='reserve' onClick={activing}>time reservation</li>
                         </ul>
                 </div>
 
@@ -93,30 +102,13 @@ const[actived,setActived]=useState({
                             : 
                             actived.clientEXP?
                         <section className={`${styles.clientsExperiences_container} ${styles.slide_in}`}>
-                            <Commenting id={id} />
+                            <CommentingPart id={id} />
                         </section>
-                        : actived.reserve?
-                        <section  className={`${styles.reservation} ${styles.slide_in}`}>
-                            <ComingSoon2/>
-                        </section>:
+                        :
                         null
                         }
                     </div>
-                    <div className={styles.imageContainer}>
-                            { <section className={styles.VIP}>
-                                {
-                                (VIP) &&
-                                <figure>
-                                    <img src={VIPimg} alt="VIP"/>
-                                    <figcaption>
-                                        VIP
-                                    </figcaption>
-                                </figure>
-                                }
-                            </section> }
-                            <img className={styles.profileIMG} src={profile_picture} alt='profile_picture'/>
-                            <p><span>Name : </span> {first_name} {last_name} </p>
-                    </div>
+
 
                 </div>
             </>
