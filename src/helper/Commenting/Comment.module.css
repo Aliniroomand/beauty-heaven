@@ -1,15 +1,58 @@
-
-.commentsContainer{
+.mainContainer{
+    font-family: inherit;
+    font-size:1.2rem;
     width: 100%;
     height: 100%;
 }
+.commentsContainer{
+border-bottom: 1px solid var(--suratiTire) ;
+margin-bottom: 1rem;
+padding-bottom: 1rem;
+}
+.paperBG{
+position: fixed;
+width: 100%;
+height:100%;
+left: 0;
+top: 0;
+z-index: -1;
+
+}
 .commentInput{
+    margin: 1rem;
     width: 50%;
-    height: 30px;
+    height: 40px;
     background: none;
     border: none;
-    box-shadow: 0 0 10px;
-    margin-top: 1%;
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.251), 0 0 30px rgba(0, 0, 0, 0.525),0 0 20px #00000080;
+    margin-top: 2%;
     border-radius: 20px;
     padding-inline: 20px;
+    transition: 0.3s;
+    font-family: inherit;
+    font-size:inherit;
+
+}
+.commentInput:focus{
+    box-shadow:0 0 5px rgb(0, 0, 0), 0 0 30px rgb(0, 0, 0),0 0 20px #000;
+background: rgba(7, 6, 6, 0.788);
+transition: 0.3s;
+color: #fff;
+
+}
+
+.button{
+    margin-inline: 1rem;
+    color: var(--banafshRoshan);
+    font-size: 1rem;
+    cursor: pointer;
+}
+.commentText{
+color: #000;
+word-wrap: break-word;
+align-items: left;
+text-align: center;
+display: flex;
+margin-left: 2rem;
+
 }

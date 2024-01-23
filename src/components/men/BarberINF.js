@@ -86,7 +86,7 @@ const[actived,setActived]=useState({
                     
                     <div className={styles.informations}>
                         {
-                        (!actived.infos&& !actived.clientEXP && !actived.reserve)
+                        (!actived.infos&& !actived.clientEXP)
                         ? <p className={styles.select_first}>Choose One!</p>
                         :
                         actived.infos?
