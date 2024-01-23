@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 //components
 import comments_storage from './Comments_storage';
 import Action from './Action';
-
+//styles 
+import styles from "./Comment.module.css"
 // IMAGES
-import ArrowDown from "../../assets/ArrowDown.svg"
+import {ReactComponent as ArrowDown} from "../../assets/ArrowDown.svg"
 import {ReactComponent as ArrowUp} from "../../assets/ArrowUp.svg"
 
 const Comment = ({comment}) => {
@@ -22,11 +23,12 @@ const handleNewComment =()=>{
     const[input,setInput]=useState("")
     const onAddComment=()=>{};
     return (
-        <div>
-            <div className=''>
+        <div className={styles.mainContainer}>
+            <div className={styles.commentsContainer}>
                 {comment.id === 1 ?(
                 <>
                     <input
+                    className={styles.commentInput}
                     type='text'
                     autoFocus
                     value={input}

@@ -6,7 +6,6 @@ import { Link, useParams } from 'react-router-dom';
 import styles from"./BarberINF.module.css"
 
 //components 
-import ComingSoon2 from '../ComingSoon2';
 import CommentingPart from '../../helper/Commenting/CommentingPart';
 
 //images
