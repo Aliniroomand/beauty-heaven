@@ -1,6 +1,7 @@
 
 //Contex
 import BarbersContextProvider from './context/BarbersContextProvider';
+import BeauticianContextProvider from './context/BeauticianContextProvider';
 //Components
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
@@ -17,9 +18,11 @@ function App() {
     <div className={styles.container} style={{ textAlign: "center", height: "100vh", overflow: "hidden"  }}>
         <AnimatePresence mode="wait">
       <BarbersContextProvider>
+      <BeauticianContextProvider>
         <Navbar/>
-      <Landing/>
+        <Landing/>
       {/* <Footer/> */}
+      </BeauticianContextProvider>
       </BarbersContextProvider>
         </AnimatePresence>
     </div>
