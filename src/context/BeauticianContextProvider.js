@@ -32,7 +32,7 @@ const BeauticianContextProvider = (props) => {
           if (item.id % 4 === 0) {
             services.push('Manicures_Pedicures','Facial_Treatments','Waxing','Body_Massage',"Bride_Services");
           }
-          if (item.id <= 5 || item.id % 4 === 0){
+          if (item.id <= 10 ){
             VIP=true
           }
 

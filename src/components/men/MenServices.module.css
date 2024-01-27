@@ -113,17 +113,17 @@ text-wrap:nowrap;
 }
 
 
-input[type="checkbox"]{
+.input{
     border-radius: 50%;
     width: 18px;
     height: 18px;
     appearance: none;
     border: 2px solid white;
 }
-input[type="checkbox"]:checked{
+.input:checked{
 background-color: var(--goldRoshan);
 }
-input[type="checkbox"]:disabled{
+.input:disabled{
     background-color: rgb(255, 0, 0);
     
 

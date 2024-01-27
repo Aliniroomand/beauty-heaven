@@ -6,7 +6,7 @@ import styles from './WomenServices.module.css';
 import BeauticianList from './BeauticianList';
 
 //images
-import BG from '../../assets/women-services/mainBG.jpg'
+import BG from '../../assets/women-services/mainBG.png'
 //transition
 import PagesTransition from '../../helper/PagesTransition'
 
@@ -34,7 +34,6 @@ const WomenServices = () => {
     //for showing what services are choosen
   const choosedServices = Object.keys(checkedItems).filter((key) => checkedItems[key] === true);
   // _______________
-
 //for search by LOC
 const [searchLocation,setSearchLocation]=useState("");
 const search_by_Location=(e)=>{
@@ -64,72 +63,92 @@ const search_by_Location=(e)=>{
         <ul className={styles.listContainer}>
             <h3>choose what<br/> service or services<br/> do you need</h3>
           <li>
-            <label htmlFor="haircut">
-              <input
-                type="checkbox"
-                id="haircut"
-                name="haircut"
-                checked={checkedItems.haircut || false}
-                onChange={handleCheckboxChange}
-                disabled={checkedItems.groom_services}
-              />
-              Haircut
+            <label htmlFor="HairCare">
+              HairCare
             </label>
+              <input
+                className={styles.input}
+                type="checkbox"
+                id="HairCare"
+                name="HairCare"
+                checked={checkedItems.HairCare || false}
+                onChange={handleCheckboxChange}
+                disabled={checkedItems.Bride_Services}
+              />
           </li>
           <li>
-            <label htmlFor="beard_service">
+            <label htmlFor="Manicures_Pedicures">
+              Manicures And Pedicures
+            </label>
               <input
+                className={styles.input}
                 type="checkbox"
-                id="beard_service"
-                name="beard_service"
-                checked={checkedItems.beard_service || false}
+                id="Manicures_Pedicures"
+                name="Manicures_Pedicures"
+                checked={checkedItems.Manicures_Pedicures|| false}
                 onChange={handleCheckboxChange}
-                disabled={checkedItems.groom_services}
+                disabled={checkedItems.Bride_Services}
 
               />
-              Beard services
-            </label>
           </li>
           <li>
-            <label htmlFor="scalp_treatments">
+            <label htmlFor="Facial_Treatments">
+              Facial Treatments
+            </label>
               <input
+                className={styles.input}
                 type="checkbox"
-                id="scalp_treatments"
-                name="scalp_treatments"
-                checked={checkedItems.scalp_treatments || false}
+                id="Facial_Treatments"
+                name="Facial_Treatments"
+                checked={checkedItems.Facial_Treatments || false}
                 onChange={handleCheckboxChange}
-                disabled={checkedItems.groom_services}
+                disabled={checkedItems.Bride_Services}
 
               />
-              Scalp Treatments
-            </label>
           </li>
           <li>
-            <label htmlFor="hair_coloring">
-              <input
-                type="checkbox"
-                id="hair_coloring"
-                name="hair_coloring"
-                checked={checkedItems.hair_coloring || false}
-                onChange={handleCheckboxChange}
-                disabled={checkedItems.groom_services}
-
-              />
+            <label htmlFor="Waxing">
               Hair Coloring
             </label>
+              <input
+                className={styles.input}
+                type="checkbox"
+                id="Waxing"
+                name="Waxing"
+                checked={checkedItems.Waxing || false}
+                onChange={handleCheckboxChange}
+                disabled={checkedItems.Bride_Services}
+
+              />
           </li>
           <li>
-            <label htmlFor="groom_services">
+            <label htmlFor="Body_Massage">
+              Body Massage
+            </label>
               <input
+                className={styles.input}
                 type="checkbox"
-                id="groom_services"
-                name="groom_services"
-                checked={checkedItems.groom_services || false}
+                id="Body_Massage"
+                name="Body_Massage"
+                checked={checkedItems.Body_Massage || false}
+                onChange={handleCheckboxChange}
+                disabled={checkedItems.Bride_Services}
+
+                />
+          </li>
+          <li>
+            <label htmlFor="Bride_Services">
+              Bride Services
+            </label>
+              <input
+                className={styles.input}
+                type="checkbox"
+                id="Bride_Services"
+                name="Bride_Services"
+                checked={checkedItems.Bride_Services || false}
                 onChange={handleCheckboxChange}
                 />
-              Groom Services
-            </label>
-                {checkedItems.groom_services?<p className={styles.noteOfGroomService}>!!when you choose Groom services it includes all of services!!</p>:null}
+            {checkedItems.Bride_Services?<p className={styles.noteOfGroomService}>!!when you choose Bride Services it includes all of services!!</p>:null}
           </li>
         </ul>
 

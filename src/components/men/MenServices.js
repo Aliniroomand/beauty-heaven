@@ -65,7 +65,10 @@ const search_by_Location=(e)=>{
             <h3>choose what<br/> service or services<br/> do you need</h3>
           <li>
             <label htmlFor="haircut">
+              Haircut
+            </label>
               <input
+              className={styles.input}
                 type="checkbox"
                 id="haircut"
                 name="haircut"
@@ -73,12 +76,13 @@ const search_by_Location=(e)=>{
                 onChange={handleCheckboxChange}
                 disabled={checkedItems.groom_services}
               />
-              Haircut
-            </label>
           </li>
           <li>
             <label htmlFor="beard_service">
+              Beard services
+            </label>
               <input
+              className={styles.input}
                 type="checkbox"
                 id="beard_service"
                 name="beard_service"
@@ -87,12 +91,13 @@ const search_by_Location=(e)=>{
                 disabled={checkedItems.groom_services}
 
               />
-              Beard services
-            </label>
           </li>
           <li>
             <label htmlFor="scalp_treatments">
+              Scalp Treatments
+            </label>
               <input
+              className={styles.input}
                 type="checkbox"
                 id="scalp_treatments"
                 name="scalp_treatments"
@@ -101,12 +106,13 @@ const search_by_Location=(e)=>{
                 disabled={checkedItems.groom_services}
 
               />
-              Scalp Treatments
-            </label>
           </li>
           <li>
             <label htmlFor="hair_coloring">
+              Hair Coloring
+            </label>
               <input
+              className={styles.input}
                 type="checkbox"
                 id="hair_coloring"
                 name="hair_coloring"
@@ -115,20 +121,19 @@ const search_by_Location=(e)=>{
                 disabled={checkedItems.groom_services}
 
               />
-              Hair Coloring
-            </label>
           </li>
           <li>
             <label htmlFor="groom_services">
+              Groom Services
+            </label>
               <input
+              className={styles.input}
                 type="checkbox"
                 id="groom_services"
                 name="groom_services"
                 checked={checkedItems.groom_services || false}
                 onChange={handleCheckboxChange}
                 />
-              Groom Services
-            </label>
                 {checkedItems.groom_services?<p className={styles.noteOfGroomService}>!!when you choose Groom services it includes all of services!!</p>:null}
           </li>
         </ul>
