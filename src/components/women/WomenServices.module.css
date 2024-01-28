@@ -43,7 +43,7 @@
     transition: all 0.2s ease-in-out;
     box-shadow:0 0 5px var(--suratiTire);
     color: var(--suratiTire);
-    text-shadow: 0 0 5px #fff;
+    text-shadow: 0 0 5px var(--suratiTire);
 }
 .buttonContainer button:hover{
 transform: scale(1.1);
@@ -89,14 +89,15 @@ transition: 0.5s;
 
 }
 .searchByLocation input:focus{
-    box-shadow:0 0 30px #fff, 0 0 20px #fff;
+    box-shadow:0 0 30px var(--suratiTire), 0 0 20px var(--suratiTire);
     transition: 0.5s;
     border: none;
-    background: #eedde4;
+    background:var(--suratiTire);
     transition: 0.5s;
 }
 .searchByLocation input::placeholder{
     color: #000;
+    text-shadow: 0 0 5px var(--suratiTire);
     opacity: 0.6;
     }
 
@@ -106,9 +107,9 @@ transition: 0.5s;
     list-style: none;
     font-size: 1.8rem;
     color:var(--suratiTire);
-    text-shadow: 0 0 5px #fff;
+    text-shadow: 0 0 1px var(--suratiTire),0 0 7px #fff;
     width: 33vw;
-    box-shadow: 0 0 30px #000 ,inset 0 0 5px #000, inset 0 0 30px #000;
+    box-shadow: 0 0 30px var(--suratiRoshan) ,inset 0 0 5px var(--suratiRoshan), inset 0 0 30px var(--suratiRoshan);
     padding: 20px;
     border-radius: 50px;
     backdrop-filter: blur(3px);
@@ -125,6 +126,7 @@ text-wrap:nowrap;
     height: 18px;
     appearance: none;
     border: 2px solid var(--suratiTire);
+    cursor: pointer;
 }
 .input:checked{
 background-color: var(--suratiTire);
@@ -132,13 +134,12 @@ background-color: var(--suratiTire);
 }
 .input:disabled{
     background-color: rgb(255, 0, 0);
-    text-decoration:overline;
 
 }
 
 .listContainer li label{
     color: var(--suratiRoshan);
-    text-shadow: 0 0 2px var(--suratiRoshan2);
+    text-shadow: 0 0 5px var(--suratiRoshan);
     transition: .3s;
     text-decoration: none;
 }

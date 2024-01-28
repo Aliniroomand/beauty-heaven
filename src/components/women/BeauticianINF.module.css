@@ -21,6 +21,8 @@
     width: 40%;
     left: 60%;
     height: 100%;
+    box-shadow:inset 0 0 10px var(--suratiTire),0 0 10px var(--suratiTire);
+    border-radius:30px ;
 }
 .title_container ul{
     height: 100%;
@@ -34,13 +36,23 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    background:var(--goldRoshan);
-    box-shadow: 0 0 30px #000 ,inset 0 0 5px #000, inset 0 0 30px #000;
     border-radius: 50%;
     height: calc(100% / 3.5);
     width: 50%;
     font-size: 1.5rem;
-    cursor: pointer;   
+    cursor: pointer;  
+    box-shadow:0 0 10px var(--suratiTire),inset 0 0 30px var(--suratiTire);
+    color: #000;
+    text-shadow: 0 0 5px var(--suratiTire); 
+    transition: 0.3s;
+}
+.deactived_part:hover{
+    transform: scale(1.1);
+    color: #fff;
+    box-shadow:inset 0 0 50px var(--suratiTire),inset 0 0 70px #00000082;
+    text-shadow: 0 0 5px #000;
+    transition: 0.3s;
+    
 }
 /* for elements when actived */
 .actived_part{
@@ -53,9 +65,9 @@
     width: 50%;
     font-size: 1.5rem;
     cursor: pointer;   
-    color: var(--goldRoshan);
-    background: #000;
-    box-shadow: 0 0 30px #000,inset 0 0 5px var(--goldRoshan), inset 0 0 30px var(--goldRoshan);
+    color: #fff;
+    background: var(--suratiTire);
+    box-shadow: 0 0 30px #000,inset 0 0 5px #000000, inset 0 0 30px #000000;
     transition: 0.3s;
 
 }
@@ -63,11 +75,10 @@
 width: 50%;
 height: 100%;
 border-radius: 30px;
-box-shadow: 0 0 20px ;
-background: rgba(167, 167, 167, 0.384);
 top: 0;
 left: 25%;
 right: 25%;
+box-shadow: 0 0 30px #b3005fd0,inset 0 0 30px #b3005fd0;
 }
 .clientsExperiences_container{
 width: 100%;
@@ -113,15 +124,17 @@ border-radius:50px;
 
 }
 .imageContainer p{
-    color: var(--goldRoshan);
+    color: var(--banafshTire);
     font-size: 2rem;
-    text-shadow: 0 0 5px #000;
+    text-shadow: 0 0 5px var(--banafshTire);
+    border-radius: 30px;
     position: absolute;
     bottom: 10%;
     padding-inline: 5%;
+    box-shadow: 0 0 20px var(--suratiTire),inset 0 0 40px var(--suratiTire);
 }
 .imageContainer p span{
-    color: var(--abiTire);
+    color: #000;
     font-weight: 900;
     text-shadow: 0 0 5px #fff;
 
@@ -133,11 +146,12 @@ position: relative;
 }
 .select_first{
     font-size: 3rem;
+    font-weight: 900;
     top: 30%;
     position: absolute;
     padding-inline: 15%;
-    text-shadow:0 0 10px #000, 0 0 3px #000;
-    color: var(--goldTire);
+    text-shadow:0 0 30px #fff, 0 0 5px #000;
+    color: #000;
 }
 .personal_info{
     display: flex;
@@ -145,32 +159,30 @@ position: relative;
     align-items:flex-start;
     justify-content: flex-start;
     padding: 10px;
-    color: var(--goldTire);
-    text-shadow: 0 0 2px #000;
     font-size: 2rem;
     height: 100%;
 }
 .personal_info h1{
 font-family: var(--en1);
-color: var(--goldRoshan);
+color: var(--suratiTire);
 padding: 10px;
 left: 0;
-box-shadow:0px 0px 5px #0000008c,5px -5px 5px #0000008f,inset -5px 5px 5px #ffffff7c,inset -5px -5px 5px #ffffff7c  ;
+box-shadow:0px 0px 5px #fff,5px -5px 5px #fff,inset -5px 5px 5px #ffffff7c,inset -5px -5px 5px #ffffff7c  ;
 align-self: center;
 border-radius: 50px;
-text-shadow: 0 0 10px #000;
+text-shadow: 0 0 10px #fff;
 }
 .personal_info p{
     font-size: 1.5rem;
     font-family: var(--en2);
-    color:var(--abiTire);
+    color:#000;
     text-shadow: 0 0 10px #fff;
     height: calc(100% / 6);
 }
 .personal_info p span{
     font-size: 2rem;
-    color: var(--goldTire);
-    text-shadow: 0 0 5px #000;
+    color: var(--suratiTire);
+    text-shadow: 0 0 5px var(--suratiTire);
     font-family: var(--en2);
 
 }
@@ -179,45 +191,15 @@ text-shadow: 0 0 10px #000;
 
 
 
-.reservation{
-    width: 100%;
-    height: 100%;
-    background: #00000068;
-}
+
 .loadingPart{
-    color: var(--goldTire);
+    color: var(--suratiTire);
     font-size: 4rem;
     margin: 250px ;
-    text-shadow: 0 0 1px #fff,0 0 5px #000,0 0 20px #000;
+    text-shadow: 0 0 2px #000,0 0 5px var(--suratiTire),0 0 10px var(--suratiTire),0 0 20px #fff;
     animation:  wobble-hor-bottom 0.5s ease infinite;
     
 }
-
-.textContainer {
-    font-size: 1.4rem;
-    color: rgb(0, 0, 0);
-    font-weight: 600;
-
-}
-.textContainer a button{
-    width:200px;
-    height: 30px;
-    margin: 0 20px;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    background-color: rgb(247, 181, 60);
-    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.5),4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);;
-
-}
-.textContainer a button:hover{
-    background-color: rgb(0, 0, 0);
-    color: rgb(247, 181, 60);
-    cursor: pointer;
-    transition: .3s;
-    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), inset -4px -4px 8px rgba(255, 255, 255, 0.5),4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);;
-}
-
-
 
 
 

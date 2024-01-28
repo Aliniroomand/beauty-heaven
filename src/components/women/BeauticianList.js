@@ -3,37 +3,37 @@ import React, { useContext } from 'react';
 // Context
 import { BeauticianContext } from '../../context/BeauticianContextProvider';
 // Components
-import Barber from '../men/Barber';
+import Beautician from './Beautician';
 // Loading
-import menLoading from '../../assets/loading/men-loading.gif';
+import  womenLoading from '../../assets/loading animated/women-loading.gif';
 // Styles
 import styles from './BeauticianList.module.css';
 
-const BarbersList = ({ services ,searchByLocation , searchMethod}) => {
-  const Barbers = useContext(BeauticianContext);
-
-let filtered=[];
+const BeauticianList = ({ services ,searchByLocation , searchMethod}) => {
+  const beautician = useContext(BeauticianContext);
+console.log(beautician);
+  let filtered=[];
 
 if( searchMethod==="services"){
   if(services.length < 1 ){
-    filtered=Barbers
+    filtered=beautician
   }else{
-    filtered =Barbers.filter(barber => barber.services.sort().toString().includes( services.sort().toString()))
+    filtered =beautician.filter(beautician => beautician.services.sort().toString().includes( services.sort().toString()))
   }
 }
 
 if (searchMethod === "location"){
   if(searchByLocation.split("").length < 1){
-    filtered=Barbers;
+    filtered=beautician;
   } else{
-    filtered =Barbers.filter(barber=>barber.address.trim().toLowerCase().includes(searchByLocation.toLowerCase().trim())
-                              || barber.name.trim().toLowerCase().includes(searchByLocation.toLowerCase().trim()))
+    filtered =beautician.filter(beautician=>beautician.address.trim().toLowerCase().includes(searchByLocation.toLowerCase().trim())
+                              || beautician.name.trim().toLowerCase().includes(searchByLocation.toLowerCase().trim()))
 }
 }
   return (
     <div className={styles.container}>
       <h2>
-        {`List of Barbers:`}<br />
+        {`List of Beautician:`}<br />
         {`total: ${filtered.length} persons`}
       </h2>
       <div className={styles.containerOfList}>
@@ -41,8 +41,8 @@ if (searchMethod === "location"){
 
       filtered.length ? 
     (
-      filtered.map(barber => (
-        <Barber key={barber.id} barberData={barber} />
+      filtered.map(beautician => (
+        <Beautician key={beautician.id} beauticianData={beautician} />
       ))
     )
    : 
@@ -59,7 +59,7 @@ if (searchMethod === "location"){
   
       (
         <div className={styles.loadingPart}>
-          <img src={menLoading} alt="loading" />
+          <img src={womenLoading} alt="loading" />
           <figcaption>LOADING</figcaption>
         </div>
       )
@@ -69,4 +69,4 @@ if (searchMethod === "location"){
   );
 };
 
-export default BarbersList;
+export default BeauticianList;

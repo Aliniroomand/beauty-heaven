@@ -160,7 +160,7 @@ const search_by_Location=(e)=>{
 // {/* search by location */}
     <div className={styles.searchByLocation}>
       <h2>Enter Name <br/>Or <br/> Location to find ...</h2>
-      <input placeholder='Loacation includes country,city,street,...' type='text' onChange={search_by_Location}/>
+      <input placeholder='Enter name or Location (Loacation includes country,city,street,...)' type='text' onChange={search_by_Location}/>
     </div>
     // ____________
 

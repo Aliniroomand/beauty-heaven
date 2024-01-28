@@ -3,8 +3,8 @@
     flex-direction: row;
     align-items: center;
     width: 20vw;
-    border: 1px solid gray;
-    background-color: rgba(128, 128, 128, 0.349);
+    border: 1px solid var(--suratiTire);
+    box-shadow: inset 0 0 50px var(--suratiTire);
     margin-bottom: 5px;
     padding: 5px 10px 5px 20px;
     backdrop-filter: blur(2px);
@@ -24,30 +24,29 @@
     text-wrap: nowrap;
 }
 .textContainer h3{
-    color:var(--goldTire);
+    color: #fff;
     padding: 0;
     margin: 0;
     font-size: 1rem;
-    text-shadow: 0 0 3px #000000;
+    text-shadow: 0 0 3px #000;
     
 }
 .textContainer h3 span{
-    color:var(--abiRoshan);
-    text-shadow: 0 0 2px #000000;
+    color:#000;
+    text-shadow: 0 0 5px #fff;
     
 }
 .VIP h3{
     position: fixed;
-    background: var(--goldTire);
+    background: var(--goldRoshan);
     top: 0px;
     left: 5px;
     padding: 0px 10px;
-    
     font-size: 0.7rem;
     font-weight: 900;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    color: var(--abiTire);
+    color:#000;
     z-index: 0;
 }
 

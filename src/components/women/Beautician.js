@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 //styles
-// import styles from './Barber.module.css'
+import styles from './Beautician.module.css'
 
 
 const Beautician = ({beauticianData}) => {
 
     return (
       <>
-        <Link to={`/menservices/${beauticianData.id}`} className={styles.container}>
+        <Link to={`/womenservices/${beauticianData.id}`} className={styles.container}>
             <div id={beauticianData.id}className={styles.imageContainer}>
                 <img src={beauticianData.profile_picture} alt='profile'/>
             </div>
