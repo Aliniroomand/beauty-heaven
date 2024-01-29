@@ -7,12 +7,11 @@ import BarberINF from './men/BarberINF';
 import BeauticianINF from "../components/women/BeauticianINF"
 import Website from './web/Website';
 import UserPanel from './admin/UserPanel';
-//styles
-import styles from "./Landing.module.css"
+
 
 const Landing = () => {
     return (
-        <div className={styles.container}>
+        <div>
       <Routes>
         <Route path="/UserPanel" element={<UserPanel />} />
         <Route path="/Website" element={<Website/>} />

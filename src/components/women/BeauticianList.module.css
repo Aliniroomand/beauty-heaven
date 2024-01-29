@@ -3,22 +3,22 @@
 }
 .container h2{
 position: relative;
-color: var(--suratiRoshan2);
+color: var(--suratiRoshan);
 animation: focus-in-contract 1s;
-text-shadow: 0 0 2px var(--suratiRoshan2),0 0 5px #000 ;
+text-shadow: 0 0 2px #fff,0 0 5px #fff ;
 }
 ::-webkit-scrollbar {
     width: 15px;
   }
   
   ::-webkit-scrollbar-track {
-    background-color: var(--suratiRoshan);
+    background-color: var(--khakestariRoshan);
     border-radius: 50px;
     
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: var(--suratiRoshan2);
+    background-color: var(--khakestariTire);
     border-radius: 50px;
     border: 0.5px solid #000;
 
@@ -26,7 +26,7 @@ text-shadow: 0 0 2px var(--suratiRoshan2),0 0 5px #000 ;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #303030;
+    background-color: var(--suratiRoshan);
     cursor: pointer;
   }
   .selectMethodError,
@@ -34,7 +34,6 @@ text-shadow: 0 0 2px var(--suratiRoshan2),0 0 5px #000 ;
     position: relative;
     font-size: 2rem;
     top: 30%;
-    left:50%;
     color: var(--banafshTire);
     text-shadow: 0 0 2px #fff ,0 0 5px #fff ;
 
@@ -63,12 +62,20 @@ text-shadow: 0 0 2px var(--suratiRoshan2),0 0 5px #000 ;
 
 .containerOfList{
   display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-column-gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 10px;
 grid-row-gap: 6px;
 height: 20rem;
 overflow-y: scroll;
+
 }
+
+
+
+
+
+
+
 @keyframes focus-in-contract {
     
   0% {

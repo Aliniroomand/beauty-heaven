@@ -58,7 +58,7 @@ const search_by_Location=(e)=>{
   (searchMethod === 'services') ?
   <>
   {/* search by services  */}
-    <div>
+    <div className={styles.servicesContainer}>
       <form  >
         <ul className={styles.listContainer}>
             <h3>choose what<br/> service or services<br/> do you need</h3>
@@ -148,7 +148,7 @@ const search_by_Location=(e)=>{
                 checked={checkedItems.Bride_Services || false}
                 onChange={handleCheckboxChange}
                 />
-            {checkedItems.Bride_Services?<p className={styles.noteOfGroomService}>!!when you choose Bride Services it includes all of services!!</p>:null}
+            {checkedItems.Bride_Services && <p className={styles.noteOfGroomService}>!!when you choose Bride Services it includes all of services!!</p>}
           </li>
         </ul>
 

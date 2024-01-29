@@ -59,7 +59,7 @@ const search_by_Location=(e)=>{
   (searchMethod === 'services') ?
   <>
   {/* search by services  */}
-    <div>
+    <div className={styles.servicesContainer}>
       <form  >
         <ul className={styles.listContainer}>
             <h3>choose what<br/> service or services<br/> do you need</h3>

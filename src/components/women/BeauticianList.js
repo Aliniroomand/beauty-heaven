@@ -11,7 +11,6 @@ import styles from './BeauticianList.module.css';
 
 const BeauticianList = ({ services ,searchByLocation , searchMethod}) => {
   const beautician = useContext(BeauticianContext);
-console.log(beautician);
   let filtered=[];
 
 if( searchMethod==="services"){
