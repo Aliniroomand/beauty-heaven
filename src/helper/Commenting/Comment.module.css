@@ -46,6 +46,23 @@ color: #fff;
     font-size: 1rem;
     cursor: pointer;
 }
+.commentInputContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.commentingBTN{
+box-shadow: 0 0 5px #000,inset 0 0 5px;
+ padding: 6px;
+ border-radius: 20px;
+ cursor: pointer;
+ transition: 0.2s;
+}
+.commentingBTN:hover{
+    box-shadow: 0 0 2px #000,inset 0 0 10px;
+    transition: 0.2s;
+}
 .commentText{
 color: #000;
 word-wrap: break-word;

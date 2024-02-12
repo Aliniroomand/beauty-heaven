@@ -9,42 +9,44 @@ import styles from "./Comment.module.css"
 import {ReactComponent as ArrowDown} from "../../assets/ArrowDown.svg"
 import {ReactComponent as ArrowUp} from "../../assets/ArrowUp.svg"
 
-const Comment = ({comment}) => {
+const Comment = ({comment ,handleInsertNode,handleEditNode,handleDeleteNode}) => {
     const[editMode,setEditMode]=useState(false);
-
     const[showInput,setShowInput]=useState(false);
-    
+    const[expand,setExpand]=useState(false) 
+    const[input,setInput]=useState("");
+
 const handleNewComment =()=>{
     setExpand(!expand);
     setShowInput(true)
+};
+const onAddComment=()=>{
+    setExpand(true);
+    handleInsertNode(comment.id , input);
+    setShowInput(false);
+    setInput("");
+};
 
-}
-       const[expand,setExpand]=useState(false) 
 
-    const[input,setInput]=useState("")
-    const onAddComment=()=>{};
     return (
         <div className={styles.mainContainer}>
             <div className={styles.commentsContainer}>
                 {comment.id === 1 ?(
                     <div className={styles.comment}>
-                    <input
-                    className={styles.commentInput}
-                    type='text'
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    placeholder='type your Comment ...'
-                    />
-                    <Action 
-                        className={styles.commentText} 
-                        type="comment"
-                        handleClick={onAddComment}
-                     />
-                    {comments_storage?.item.map((cmnt) =>{
-                        return <Comment className={styles.commentText}  key={cmnt.id} comment={cmnt} />;
-
-                    })
-                    }
+                    <div className={styles.commentInputContainer}>
+                        <input
+                        className={styles.commentInput}
+                        type='text'
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        placeholder='type your Comment ...'
+                        />
+                        <Action 
+                            className={styles.commentingBTN} 
+                            type="comment"
+                            handleClick={onAddComment}
+                        />
+                     </div>
+                   
                 </div>
                 ) : (
                     <>
@@ -98,7 +100,10 @@ const handleNewComment =()=>{
                             className='inputContainer'
                             onChange={(e)=>{setInput(e.target.value)}}
                         />
-                        <Action className={styles.button} type="REPLY"/>
+                        <Action className={styles.button} 
+                            type="REPLY"
+                            handleClick={onAddComment}
+                        />
                         <Action 
                             className={styles.button} 
                             type="CANCEL"
@@ -110,8 +115,15 @@ const handleNewComment =()=>{
                 )
 
                 }
-            {comment?.item?.map((cmnt)=>{
-                return <Comment key={cmnt.id} comment={cmnt} />;
+            {comment?.items?.map((cmnt)=>{
+                return(
+                    <Comment 
+                    key={cmnt.id}
+                    comment={cmnt} 
+                    handleInsertNode={handleInsertNode}
+                    handleEditNode={handleEditNode}
+                    handleDeleteNode={handleDeleteNode} 
+                />);
             })}
             </div>
         </div>
