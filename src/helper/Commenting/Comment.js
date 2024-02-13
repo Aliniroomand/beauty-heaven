@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 //components
-import comments_storage from './Comments_storage';
 import Action from './Action';
 //styles 
 import styles from "./Comment.module.css"
@@ -14,17 +13,31 @@ const Comment = ({comment ,handleInsertNode,handleEditNode,handleDeleteNode}) =>
     const[showInput,setShowInput]=useState(false);
     const[expand,setExpand]=useState(false) 
     const[input,setInput]=useState("");
+    const inputRef= useRef(null);
 
 const handleNewComment =()=>{
     setExpand(!expand);
     setShowInput(true)
 };
 const onAddComment=()=>{
-    setExpand(true);
-    handleInsertNode(comment.id , input);
-    setShowInput(false);
-    setInput("");
+    if (editMode){
+        handleEditNode(comment.id,inputRef?.current?.innerText)
+    }else{
+        setExpand(true);
+        handleInsertNode(comment.id , input);
+        setShowInput(false);
+        setInput("");
+    }
+    if (editMode) {setEditMode(false)}
 };
+
+useEffect(()=>{
+    inputRef?.current?.focus();
+},[editMode])
+const handleDelete = ()=>{
+    handleDeleteNode(comment.id)
+};
+
 
 
     return (
@@ -42,7 +55,7 @@ const onAddComment=()=>{
                         />
                         <Action 
                             className={styles.commentingBTN} 
-                            type="comment"
+                            type="add your comment"
                             handleClick={onAddComment}
                         />
                      </div>
@@ -50,16 +63,33 @@ const onAddComment=()=>{
                 </div>
                 ) : (
                     <>
-                    <span className={styles.commentText} > {comment.name}</span>
+                    <span suppressContentEditableWarning>
+                    <span 
+                        className={styles.commentText}
+                        contentEditable={editMode}
+                        ref={inputRef}
+                        key={comment.id}
+                    > 
+                        {comment.name}
+                    </span>
+                    </span>
 
                     <div style={{display:"flex" , marginTop:"5px"}}>
                         {editMode ?
                         (<>
-                            <Action className={styles.button} type="SAVE" />
+                            <Action 
+                                className={styles.button}
+                                type="SAVE"
+                                handleClick={onAddComment} 
+                            />
                             <Action 
                                 className={styles.button} 
                                 type="CANCEL" 
-                                handleClick={()=>{setEditMode(false)}}
+                                handleClick={()=>{
+                                    if(inputRef.current)
+                                    inputRef.current.innerText=comment.name;
+                                    setEditMode(false)
+                                }}
                             />
 
                         </> ) 
@@ -85,7 +115,11 @@ const onAddComment=()=>{
                                 handleClick={()=>{setEditMode(true)}}    
                             />
 
-                            <Action className={styles.button} type="DELETE" />
+                            <Action 
+                                className={styles.button} 
+                                type="DELETE" 
+                                handleClick={handleDelete}
+                            />
                         </>
                         )}
                     </div>
@@ -109,6 +143,7 @@ const onAddComment=()=>{
                             type="CANCEL"
                             handleClick={()=>{
                                 setShowInput(false);
+                                if(!comment?.items?.length) setExpand(false);
                             }}
                         />
                     </div>

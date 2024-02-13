@@ -25,6 +25,7 @@ const CommentingPart = () => {
         const finalStructure=deleteNode(commentsData,folderId);
         setCommentsData({...finalStructure}); 
     }
+    console.log(comments_storage);
     return (
         <div>
             <Comment 
