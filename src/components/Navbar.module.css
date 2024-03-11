@@ -13,9 +13,8 @@
     /* text color */
     background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
     #FFB000;
-    /* background color */
     color: #0000;
-    border: none;
+    border: 1px solid #000;
     transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
     text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
       calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
@@ -25,8 +24,9 @@
     box-shadow: 0 0 20px #FFB000;
     position: fixed;
     top: 0;
-    left: 0.5rem;
-    height: 3.5rem;
+    left: 0;
+    height: calc(100vh / 10);
+    
   }
   
   .logo:hover,
@@ -60,13 +60,13 @@
     margin: 0;
     cursor: pointer;
     padding: .1em .3em;
+    border: 1px solid #000;
     --c: #000;
     /* text color */
     background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
     #FFB000;
     /* background color */
     color: #0000;
-    border: none;
     transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
     text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
       calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
@@ -75,10 +75,13 @@
     border-radius: 50px;
     box-shadow: 0 0 20px #FFB000;
     position: fixed;
-    top: 3.5rem;
+    top: calc(100vh / 10);
     left: 0;
+    height: calc(100vh / 10);
   }
-  
+  .return img{
+    width:70%;
+  }
   .return:hover,
   .return:focus-visible {
     --_p: 0%;
@@ -101,6 +104,7 @@
     height: 8vh;
     width: 50vw;
     left: 4rem;
+    top: 4vh;
     position: absolute;
   }
   .navItems li,
@@ -143,6 +147,46 @@
   box-shadow: inset 0 0 9e9q #0005;
   transition: 0s;
 }
+.navItems a,.navItems a h6 {
+  border:  1px solid #000;
+
+}
+.navItems a h6{
+  opacity: 0;
+  font-size: 0.7em;
+  position: absolute;
+  text-wrap: nowrap;
+  background: #FFB000;
+  padding: 5px;
+  border-radius: 40px;
+}
+.navItems a:hover > h6{
+ opacity: 1;
+  transition: 0.2s;
+}
+
+
+
+/* MQ */
+@media (width<=768px){
+.navItems{
+  flex-direction: column;
+  left: 0;
+  top: 55vh;
+  position: fixed;
+  width: fit-content;
+}
+.navItems a{
+  height: calc(100vh / 10);
+}
+.navItems a img{
+  height:90%;
+}
+.navItems a h6{
+left: 100%;
+top: 0;
+}
+}
 
 /* animations */
 
@@ -158,6 +202,7 @@
 		animation-fill-mode: both;
 			
 	}
+  
 	@keyframes bounce-out-left {
 			
 		0% {
