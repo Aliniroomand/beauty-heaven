@@ -53,6 +53,8 @@
     animation: tilt-in 1s ease 1s both;
     text-wrap: wrap;
     height: calc(100% / 7);
+    font-family: var(--en1);
+
 }
 .men_chooseGender{
 height: calc(100% / 7);

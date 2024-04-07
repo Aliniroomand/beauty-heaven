@@ -1,10 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Courgette&family=Delius&family=Lato&family=Noto+Naskh+Arabic&display=swap');
+
+
 body{
-  /* font-family: 'Amiri', serif;*/
-  /* font-family: 'Courgette', cursive; */
+
   font-family: 'Delius', cursive;
-   /* font-family: 'Lato', sans-serif; */
-  /* font-family: 'Noto Naskh Arabic', serif; */
+
   --abiTire:#060047;
   --abiRoshan:#9399FF;
   --abiRoshan2:#A9FFFD;
@@ -25,5 +29,4 @@ body{
   --neoShadow1: -3px 3px 2px #00000088,inset 3px -3px 5px #000e24af,3px -3px 5px #ffffffe5,inset -3px 3px 5px #ffffffc5;
   --textShadowLight: 0px 0px 2px #ffffff;
 
-}
-
+}}
