@@ -5,7 +5,6 @@ import BeauticianContextProvider from './context/BeauticianContextProvider';
 //Components
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
-// import Footer from './components/Footer';
 //styles
 import styles from"./App.module.css"
 
@@ -13,9 +12,10 @@ import styles from"./App.module.css"
 import { AnimatePresence } from 'framer-motion';
 
 
+
 function App() {
   return (
-    <div className={styles.container} style={{ textAlign: "center", height: "100vh", overflow: "hidden"  }}>
+    <div className={styles.container} style={{ textAlign: "center" }}>
         <AnimatePresence mode="wait">
       <BarbersContextProvider>
       <BeauticianContextProvider>

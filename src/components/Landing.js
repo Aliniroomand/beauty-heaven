@@ -11,7 +11,7 @@ import UserPanel from './admin/UserPanel';
 
 const Landing = () => {
     return (
-        <div style={{position:"relative",top:"7vh"}}>
+        <div style={{position:"relative"}}>
       <Routes>
         <Route path="/UserPanel" element={<UserPanel />} />
         <Route path="/Website" element={<Website/>} />

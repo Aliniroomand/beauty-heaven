@@ -12,10 +12,11 @@
     flex-direction: row-reverse;
     align-items: flex-start;
     justify-content: space-evenly;
-    width: 100vw;
-    height: 80vh;
-    top: 0;
+    width: 100svw;
+    height: 90svh;
+    top: 7vh;
     position: relative;
+    overflow: visible;
 }
 .title_container{
     width: 40%;

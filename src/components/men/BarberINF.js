@@ -1,6 +1,6 @@
 import React, { useState,useEffect, useContext } from 'react';
 import axios from 'axios';
-import { Link, useParams } from 'react-router-dom';
+import {useParams } from 'react-router-dom';
 
 //styles
 import styles from"./BarberINF.module.css"
