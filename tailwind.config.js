@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'text': '0 2px 4px #fff',
+      },
+      costumClass:{'textClass':['absolute z-50 backdrop-blur-lg rounded-2xl text-center px-3 top-1/3 left-1/3 text-4xl text-yellow-300 w-1/3']},
+      
       fontFamily: {
         'fa1': ['Amiri', 'serif'],
         'fa2': ['Noto Naskh Arabic', 'serif'],
