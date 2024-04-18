@@ -172,7 +172,7 @@
 .navItems{
   flex-direction: column;
   left: 0;
-  top: 55vh;
+  top: 20vh;
   position: fixed;
   width: fit-content;
 }
